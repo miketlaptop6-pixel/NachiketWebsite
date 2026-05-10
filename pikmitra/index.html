@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
     <title>PikMitra — तुमच्या खिशातला कृषी डॉक्टर | AI Farming Companion Maharashtra</title>
     <meta name="description"
         content="Maharashtra शेतकऱ्यांसाठी मोफत AI WhatsApp companion — 30 सेकंदात रोग ओळख, मंडई भाव, सरकारी योजना — मराठीत." />
@@ -25,12 +25,16 @@
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0
+            padding: 0;
+            /* Remove blue tap flash on Android Chrome */
+            -webkit-tap-highlight-color: transparent;
         }
 
         html {
             scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%
+            -webkit-text-size-adjust: 100%;
+            /* Prevent double-tap zoom delay on Android */
+            touch-action: manipulation;
         }
 
         :root {
@@ -67,7 +71,9 @@
             background: var(--w);
             color: var(--t);
             overflow-x: hidden;
-            line-height: 1.6
+            line-height: 1.6;
+            /* Safe area for Android gesture navigation bar */
+            padding-bottom: env(safe-area-inset-bottom);
         }
 
         .deva {
@@ -199,7 +205,12 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 8px;
+            /* Minimum 44×44px touch target for Android */
+            padding: 10px;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
             color: var(--t)
         }
 
@@ -209,7 +220,7 @@
             }
 
             .ntog {
-                display: block
+                display: flex
             }
 
             .nlinks.open {
@@ -243,7 +254,8 @@
 
         /* HERO */
         #hero {
-            min-height: 100vh;
+            /* Use dvh so Android URL bar doesn't cause layout jump */
+            min-height: 100dvh;
             padding-top: 68px;
             display: flex;
             align-items: center;
@@ -1367,7 +1379,8 @@
             padding: 13px 15px;
             border: 1.5px solid var(--bd);
             border-radius: var(--rmd);
-            font-size: 14px;
+            /* min 16px prevents Android auto-zoom on focus */
+            font-size: max(16px, 1em);
             font-family: var(--deva);
             color: var(--t);
             background: var(--ow);
@@ -1716,6 +1729,39 @@
             .lang-toggle {
                 margin-top: 16px;
             }
+        }
+
+        /* ============================
+           ANDROID EXTRA FIXES
+           ============================ */
+
+        /* Stack hero CTA buttons on very small screens */
+        @media(max-width:400px) {
+            .hacts {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .bwa,
+            .bgh {
+                justify-content: center;
+                width: 100%;
+            }
+
+            /* Shrink lang-toggle on tiny screens to avoid nav crowding */
+            .lang-toggle {
+                padding: 3px;
+            }
+
+            .lang-btn {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+        }
+
+        /* Ensure footer doesn't overlap Android gesture nav */
+        footer {
+            padding-bottom: calc(36px + env(safe-area-inset-bottom));
         }
     </style>
 </head>
