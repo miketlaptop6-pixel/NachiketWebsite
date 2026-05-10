@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="mr" id="html-root">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>PikMitra — तुमच्या खिशातला कृषी डॉक्टर | AI Farming Companion Maharashtra</title>
+    <meta name="description"
+        content="Maharashtra शेतकऱ्यांसाठी मोफत AI WhatsApp companion — 30 सेकंदात रोग ओळख, मंडई भाव, सरकारी योजना — मराठीत." />
+    <meta property="og:title" content="PikMitra — तुमच्या खिशातला कृषी डॉक्टर" />
+    <meta property="og:description"
+        content="मोफत AI WhatsApp farming companion for Maharashtra farmers. 30 seconds to diagnose any crop disease — in Marathi." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pikmitra.in" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://pikmitra.in" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%
+        }
+
+        :root {
+            --g: #16A34A;
+            --gd: #14532D;
+            --gl: #DCFCE7;
+            --gm: #22C55E;
+            --wa: #25D366;
+            --gold: #F59E0B;
+            --w: #fff;
+            --ow: #F9FAFB;
+            --bg: #F0FDF4;
+            --t: #111827;
+            --tm: #374151;
+            --mu: #6B7280;
+            --bd: #E5E7EB;
+            --bg2: #BBF7D0;
+            --rsm: 8px;
+            --rmd: 16px;
+            --rlg: 24px;
+            --rxl: 32px;
+            --rp: 9999px;
+            --sm: 0 1px 3px rgba(0, 0, 0, .06);
+            --smd: 0 4px 16px rgba(0, 0, 0, .08), 0 2px 6px rgba(0, 0, 0, .05);
+            --slg: 0 12px 40px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+            --sxl: 0 24px 64px rgba(0, 0, 0, .16);
+            --sg: 0 8px 32px rgba(22, 163, 74, .18);
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --deva: 'Noto Sans Devanagari', 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--w);
+            color: var(--t);
+            overflow-x: hidden;
+            line-height: 1.6
+        }
+
+        .deva {
+            font-family: var(--deva)
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        ::selection {
+            background: var(--gl);
+            color: var(--gd)
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bd);
+            border-radius: 3px
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 24px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 300ms, box-shadow 300ms
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, .9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .08)
+        }
+
+        .nlogo {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .nico {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--g), var(--gd));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px
+        }
+
+        .nlabel {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1
+        }
+
+        .nen {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--t);
+            letter-spacing: -.3px
+        }
+
+        .nmr {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--g);
+            font-family: var(--deva)
+        }
+
+        .nlinks {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none
+        }
+
+        .nlinks a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--tm);
+            transition: color 200ms
+        }
+
+        .nlinks a:hover {
+            color: var(--g)
+        }
+
+        .ncta {
+            background: var(--wa) !important;
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: var(--rp);
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, .35);
+            transition: transform 200ms, box-shadow 200ms !important
+        }
+
+        .ncta:hover {
+            background: #1da851 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .45) !important
+        }
+
+        .ntog {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: var(--t)
+        }
+
+        @media(max-width:768px) {
+            .nlinks {
+                display: none
+            }
+
+            .ntog {
+                display: block
+            }
+
+            .nlinks.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px 24px 32px;
+                box-shadow: var(--slg);
+                gap: 0;
+                border-top: 1px solid var(--bd)
+            }
+
+            .nlinks.open li {
+                padding: 14px 0;
+                border-bottom: 1px solid var(--bd)
+            }
+
+            .nlinks.open a {
+                font-size: 16px
+            }
+
+            .ncta {
+                margin-top: 16px;
+                width: fit-content
+            }
+        }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            padding-top: 68px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(160deg, #f0fdf4 0%, #fff 50%, #f0fdf4 100%)
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(22, 163, 74, .10) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: blob 8s ease-in-out infinite
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: -5%;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(245, 158, 11, .08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: blob 10s ease-in-out infinite reverse
+        }
+
+        @keyframes blob {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.1)
+            }
+        }
+
+        .hi {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            width: 100%
+        }
+
+        .hbadge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gl);
+            border: 1px solid var(--bg2);
+            border-radius: var(--rp);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gd);
+            margin-bottom: 24px
+        }
+
+        .bdot {
+            width: 7px;
+            height: 7px;
+            background: var(--g);
+            border-radius: 50%;
+            animation: pdot 2s ease-in-out infinite
+        }
+
+        @keyframes pdot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: .5;
+                transform: scale(.7)
+            }
+        }
+
+        .hsub {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--mu);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px
+        }
+
+        .hh1 {
+            font-family: var(--deva);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.0;
+            letter-spacing: -1px;
+            color: var(--t);
+            margin-bottom: 24px
+        }
+
+        .hh1 .hl {
+            background: linear-gradient(135deg, var(--g), #15803D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hbody {
+            font-family: var(--deva);
+            font-size: 18px;
+            color: var(--tm);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 480px
+        }
+
+        .hacts {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .bwa {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--wa);
+            color: #fff;
+            padding: 16px 28px;
+            border-radius: var(--rp);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--deva);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, .4);
+            transition: transform 200ms, box-shadow 200ms
+        }
+
+        .bwa:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, .5)
+        }
+
+        .bgh {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--t);
+            padding: 16px 28px;
+            border-radius: var(--rp);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: var(--deva);
+            border: 1.5px solid var(--bd);
+            transition: border-color 200ms, transform 200ms, box-shadow 200ms
+        }
+
+        .bgh:hover {
+            border-color: var(--g);
+            color: var(--g);
+            transform: translateY(-1px);
+            box-shadow: var(--smd)
+        }
+
+        .htrust {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px
+        }
+
+        .tavs {
+            display: flex
+        }
+
+        .tavs span {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            margin-left: -8px
+        }
+
+        .tavs span:first-child {
+            margin-left: 0
+        }
+
+        .ttxt {
+            font-size: 13px;
+            color: var(--mu);
+            font-family: var(--deva)
+        }
+
+        .ttxt strong {
+            color: var(--t);
+            display: block;
+            font-weight: 600
+        }
+
+        /* Phone */
+        .hphone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 6s ease-in-out infinite
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-20px)
+            }
+        }
+
+        .pframe {
+            width: 272px;
+            background: #1C1C1E;
+            border-radius: 44px;
+            padding: 12px;
+            box-shadow: var(--sxl), inset 0 0 0 2px rgba(255, 255, 255, .08)
+        }
+
+        .pnotch {
+            width: 100px;
+            height: 26px;
+            background: #1C1C1E;
+            border-radius: 0 0 18px 18px;
+            margin: 0 auto 6px;
+            position: relative;
+            z-index: 2
+        }
+
+        .pscreen {
+            background: #fff;
+            border-radius: 34px;
+            overflow: hidden
+        }
+
+        .wahdr {
+            background: #128C7E;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .waback {
+            color: rgba(255, 255, 255, .85);
+            font-size: 18px
+        }
+
+        .waav {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, var(--g), #15803D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px
+        }
+
+        .waname {
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff
+        }
+
+        .wast {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .75)
+        }
+
+        .wabody {
+            background: #ECE5DD;
+            padding: 12px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .wadate {
+            text-align: center;
+            font-size: 11px;
+            color: #667781;
+            background: rgba(255, 255, 255, .7);
+            border-radius: 8px;
+            padding: 3px 10px;
+            align-self: center
+        }
+
+        .bub {
+            max-width: 88%;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            font-family: var(--deva)
+        }
+
+        .bub.s {
+            background: #D9FDD3;
+            color: #111;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px
+        }
+
+        .bub.r {
+            background: #fff;
+            color: #111;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .08)
+        }
+
+        .bub .bt {
+            font-size: 10px;
+            color: #999;
+            text-align: right;
+            margin-top: 2px
+        }
+
+        .wimgb {
+            background: #D9FDD3;
+            align-self: flex-end;
+            border-radius: 12px;
+            border-bottom-right-radius: 4px;
+            overflow: hidden;
+            width: 136px
+        }
+
+        .wimgp {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px
+        }
+
+        .wimgc {
+            padding: 5px 10px;
+            font-size: 11px;
+            color: #555;
+            font-family: var(--deva)
+        }
+
+        .typing {
+            display: flex;
+            gap: 4px;
+            padding: 10px 14px;
+            background: #fff;
+            border-radius: 12px;
+            border-bottom-left-radius: 4px;
+            width: fit-content;
+            align-self: flex-start
+        }
+
+        .typing span {
+            width: 7px;
+            height: 7px;
+            background: #aaa;
+            border-radius: 50%;
+            animation: typ 1.4s ease-in-out infinite
+        }
+
+        .typing span:nth-child(2) {
+            animation-delay: .2s
+        }
+
+        .typing span:nth-child(3) {
+            animation-delay: .4s
+        }
+
+        @keyframes typ {
+
+            0%,
+            60%,
+            100% {
+                opacity: .3;
+                transform: translateY(0)
+            }
+
+            30% {
+                opacity: 1;
+                transform: translateY(-4px)
+            }
+        }
+
+        .tag {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block
+        }
+
+        .tg {
+            background: #dcfce7;
+            color: #15803d
+        }
+
+        .ty {
+            background: #fef9c3;
+            color: #92400e
+        }
+
+        @media(max-width:1024px) {
+            .hi {
+                grid-template-columns: 1fr;
+                gap: 56px
+            }
+
+            .hphone {
+                order: -1
+            }
+
+            .pframe {
+                width: 240px
+            }
+        }
+
+        @media(max-width:768px) {
+            .hi {
+                padding: 60px 20px
+            }
+
+            .hh1 {
+                font-size: clamp(2.4rem, 10vw, 3.8rem)
+            }
+
+            .hbody {
+                font-size: 16px
+            }
+        }
+
+        /* STATS */
+        #stats {
+            background: linear-gradient(135deg, var(--gd), #166534, var(--gd));
+            padding: 72px 24px
+        }
+
+        .sgrid {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1px 1fr;
+            align-items: center;
+            text-align: center
+        }
+
+        .sdiv {
+            width: 1px;
+            height: 80px;
+            background: rgba(255, 255, 255, .15);
+            margin: 0 auto
+        }
+
+        .snum {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 8px;
+            font-family: var(--deva)
+        }
+
+        .slbl {
+            font-size: 14px;
+            color: rgba(255, 255, 255, .75);
+            font-family: var(--deva);
+            line-height: 1.4
+        }
+
+        @media(max-width:600px) {
+            .sgrid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 12px
+            }
+
+            .sdiv {
+                display: none
+            }
+        }
+
+        /* SHARED */
+        .sec {
+            padding: 112px 24px
+        }
+
+        .sec-sm {
+            padding: 80px 24px
+        }
+
+        .inn {
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        .slabel {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--g);
+            margin-bottom: 14px
+        }
+
+        .stitle {
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--t);
+            line-height: 1.15;
+            letter-spacing: -.5px;
+            margin-bottom: 16px
+        }
+
+        .sbody {
+            font-size: 17px;
+            color: var(--mu);
+            line-height: 1.7;
+            max-width: 560px;
+            font-family: var(--deva)
+        }
+
+        .scenter {
+            text-align: center
+        }
+
+        .scenter .sbody {
+            margin: 0 auto
+        }
+
+        .mt {
+            margin-top: 64px
+        }
+
+        @media(max-width:768px) {
+            .sec {
+                padding: 72px 20px
+            }
+
+            .sec-sm {
+                padding: 64px 20px
+            }
+        }
+
+        /* HOW IT WORKS */
+        #how {
+            background: var(--w)
+        }
+
+        .swrap {
+            position: relative;
+            margin-top: 64px
+        }
+
+        .swrap::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: calc(16.67% + 28px);
+            right: calc(16.67% + 28px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--gl), var(--g), var(--gl));
+            border-radius: 2px
+        }
+
+        .sgrid3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px
+        }
+
+        .scard {
+            background: var(--ow);
+            border: 1.5px solid var(--bd);
+            border-radius: var(--rxl);
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 300ms, box-shadow 300ms, border-color 300ms;
+            position: relative;
+            z-index: 1
+        }
+
+        .scard:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--slg);
+            border-color: var(--bg2)
+        }
+
+        .sico {
+            width: 76px;
+            height: 76px;
+            background: var(--gl);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin: 0 auto 22px;
+            border: 3px solid #fff;
+            box-shadow: var(--sg)
+        }
+
+        .snum2 {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--g);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 9px
+        }
+
+        .stit {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--t);
+            margin-bottom: 10px;
+            font-family: var(--deva)
+        }
+
+        .sdesc {
+            font-size: 14px;
+            color: var(--mu);
+            line-height: 1.65;
+            font-family: var(--deva)
+        }
+
+        @media(max-width:860px) {
+            .sgrid3 {
+                grid-template-columns: 1fr
+            }
+
+            .swrap::before {
+                display: none
+            }
+        }
+
+        /* FEATURES */
+        #features {
+            background: var(--bg)
+        }
+
+        .fgrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 64px
+        }
+
+        .fcard {
+            background: #fff;
+            border-radius: var(--rxl);
+            padding: 36px;
+            border: 1.5px solid var(--bd);
+            transition: transform 300ms, box-shadow 300ms, border-color 300ms;
+            position: relative;
+            overflow: hidden
+        }
+
+        .fcard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--g), var(--gm));
+            opacity: 0;
+            transition: opacity 300ms
+        }
+
+        .fcard:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--slg);
+            border-color: var(--bg2)
+        }
+
+        .fcard:hover::before {
+            opacity: 1
+        }
+
+        .fico {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--rmd);
+            background: var(--gl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px
+        }
+
+        .ftag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--g);
+            margin-bottom: 9px
+        }
+
+        .ftit {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--t);
+            margin-bottom: 11px;
+            font-family: var(--deva)
+        }
+
+        .fdesc {
+            font-size: 14px;
+            color: var(--tm);
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-family: var(--deva)
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px
+        }
+
+        .chip {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 11px;
+            border-radius: var(--rp);
+            background: var(--gl);
+            color: var(--gd);
+            border: 1px solid var(--bg2);
+            font-family: var(--deva)
+        }
+
+        @media(max-width:720px) {
+            .fgrid {
+                grid-template-columns: 1fr
+            }
+
+            .fcard {
+                padding: 26px
+            }
+        }
+
+        /* DEMO */
+        #demo {
+            background: linear-gradient(160deg, #fff 0%, var(--bg) 100%)
+        }
+
+        .dgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center
+        }
+
+        .dbullets {
+            margin-top: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px
+        }
+
+        .dbul {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px
+        }
+
+        .dbico {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            background: var(--gl);
+            border-radius: var(--rsm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px
+        }
+
+        .dbt {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--t);
+            margin-bottom: 3px;
+            font-family: var(--deva)
+        }
+
+        .dbd {
+            font-size: 13px;
+            color: var(--mu);
+            font-family: var(--deva)
+        }
+
+        .dphone {
+            background: #1C1C1E;
+            border-radius: 36px;
+            padding: 14px;
+            box-shadow: var(--sxl);
+            max-width: 288px;
+            margin: 0 auto
+        }
+
+        .dwa {
+            background: #ECE5DD;
+            border-radius: 24px;
+            padding: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px
+        }
+
+        @media(max-width:860px) {
+            .dgrid {
+                grid-template-columns: 1fr;
+                gap: 44px
+            }
+
+            .dphone {
+                max-width: 100%
+            }
+        }
+
+        /* TRUST */
+        #trust {
+            background: var(--w);
+            text-align: center
+        }
+
+        .tbadges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 44px 0 52px
+        }
+
+        .tbadge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--ow);
+            border: 1.5px solid var(--bd);
+            border-radius: var(--rmd);
+            padding: 13px 18px;
+            transition: border-color 200ms, transform 200ms
+        }
+
+        .tbadge:hover {
+            border-color: var(--bg2);
+            transform: translateY(-2px)
+        }
+
+        .tbico {
+            font-size: 20px
+        }
+
+        .tbtxt {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--tm)
+        }
+
+        .wbox {
+            background: linear-gradient(135deg, var(--gl), #fff);
+            border: 1.5px solid var(--bg2);
+            border-radius: var(--rxl);
+            padding: 40px;
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .wem {
+            font-size: 48px;
+            margin-bottom: 12px
+        }
+
+        .wtit {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--t);
+            font-family: var(--deva);
+            margin-bottom: 10px
+        }
+
+        .wdsc {
+            font-size: 15px;
+            color: var(--mu);
+            font-family: var(--deva);
+            line-height: 1.65
+        }
+
+        /* TESTIMONIALS */
+        #testimonials {
+            background: var(--bg)
+        }
+
+        .tgrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 64px
+        }
+
+        .tcard {
+            background: #fff;
+            border-radius: var(--rxl);
+            padding: 32px;
+            border: 1.5px solid var(--bd);
+            transition: transform 300ms, box-shadow 300ms
+        }
+
+        .tcard:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--smd)
+        }
+
+        .tstars {
+            color: var(--gold);
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 14px
+        }
+
+        .tq {
+            font-family: var(--deva);
+            font-size: 15px;
+            color: var(--tm);
+            line-height: 1.75;
+            margin-bottom: 22px;
+            font-style: italic
+        }
+
+        .tq::before {
+            content: '\201C';
+            color: var(--g);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 0;
+            vertical-align: -.4em;
+            margin-right: 3px
+        }
+
+        .tq::after {
+            content: '\201D';
+            color: var(--g);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 0;
+            vertical-align: -.4em;
+            margin-left: 3px
+        }
+
+        .tau {
+            display: flex;
+            align-items: center;
+            gap: 11px
+        }
+
+        .tav {
+            width: 42px;
+            height: 42px;
+            background: var(--gl);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            border: 2px solid var(--bg2)
+        }
+
+        .tname {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--t);
+            font-family: var(--deva)
+        }
+
+        .trole {
+            font-size: 11px;
+            color: var(--mu);
+            font-family: var(--deva)
+        }
+
+        .tcrop {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--g);
+            background: var(--gl);
+            padding: 2px 8px;
+            border-radius: var(--rp);
+            margin-left: auto;
+            font-family: var(--deva)
+        }
+
+        @media(max-width:860px) {
+            .tgrid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* WAITLIST */
+        #waitlist {
+            padding: 112px 24px;
+            background: linear-gradient(160deg, var(--gd) 0%, #14532D 50%, #0f3d1f 100%);
+            position: relative;
+            overflow: hidden
+        }
+
+        #waitlist::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(255, 255, 255, .04) 0%, transparent 60%);
+            border-radius: 50%
+        }
+
+        .wli {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1
+        }
+
+        .wlbadge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: var(--rp);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .9);
+            margin-bottom: 26px
+        }
+
+        .wlt {
+            font-family: var(--deva);
+            font-size: clamp(1.9rem, 5vw, 3.4rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 13px;
+            letter-spacing: -.5px
+        }
+
+        .wls {
+            font-family: var(--deva);
+            font-size: 17px;
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 44px;
+            line-height: 1.6
+        }
+
+        .wlform {
+            background: #fff;
+            border-radius: var(--rxl);
+            padding: 36px;
+            box-shadow: var(--sxl);
+            text-align: left
+        }
+
+        .frow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px
+        }
+
+        .fg {
+            margin-bottom: 14px
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--tm);
+            margin-bottom: 5px;
+            font-family: var(--deva)
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1.5px solid var(--bd);
+            border-radius: var(--rmd);
+            font-size: 14px;
+            font-family: var(--deva);
+            color: var(--t);
+            background: var(--ow);
+            transition: border-color 200ms, box-shadow 200ms;
+            appearance: none;
+            -webkit-appearance: none
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--g);
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, .12);
+            background: #fff
+        }
+
+        input::placeholder {
+            color: #9CA3AF
+        }
+
+        .selw {
+            position: relative
+        }
+
+        .selw::after {
+            content: '▾';
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--mu);
+            pointer-events: none;
+            font-size: 12px
+        }
+
+        .fsub {
+            width: 100%;
+            padding: 17px;
+            background: var(--wa);
+            color: #fff;
+            border: none;
+            border-radius: var(--rmd);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--deva);
+            cursor: pointer;
+            transition: transform 200ms, box-shadow 200ms, background 200ms;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px
+        }
+
+        .fsub:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, .45)
+        }
+
+        .fnote {
+            text-align: center;
+            font-size: 12px;
+            color: var(--mu);
+            margin-top: 14px;
+            font-family: var(--deva)
+        }
+
+        .wlcount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px
+        }
+
+        .wldot {
+            width: 8px;
+            height: 8px;
+            background: var(--wa);
+            border-radius: 50%;
+            animation: pdot 2s ease-in-out infinite
+        }
+
+        .wlct {
+            font-size: 14px;
+            color: rgba(255, 255, 255, .85);
+            font-family: var(--deva)
+        }
+
+        .fsuc {
+            display: none;
+            text-align: center;
+            padding: 36px
+        }
+
+        .fsuc.show {
+            display: block
+        }
+
+        .fform.hide {
+            display: none
+        }
+
+        .scico {
+            font-size: 56px;
+            margin-bottom: 14px
+        }
+
+        .sct {
+            font-family: var(--deva);
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--t);
+            margin-bottom: 10px
+        }
+
+        .scb {
+            font-family: var(--deva);
+            font-size: 15px;
+            color: var(--mu);
+            line-height: 1.6
+        }
+
+        @media(max-width:600px) {
+            .frow {
+                grid-template-columns: 1fr
+            }
+
+            .wlform {
+                padding: 22px 18px
+            }
+
+            #waitlist {
+                padding: 72px 20px
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--t);
+            padding: 60px 24px 36px
+        }
+
+        .ftin {
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        .fttop {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 44px;
+            padding-bottom: 44px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            margin-bottom: 36px
+        }
+
+        .ftlogo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px
+        }
+
+        .ftlic {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, var(--g), var(--gd));
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px
+        }
+
+        .ftln {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff
+        }
+
+        .fttag {
+            font-family: var(--deva);
+            font-size: 13px;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.6;
+            margin-bottom: 18px
+        }
+
+        .ftct {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 14px
+        }
+
+        .ftls {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 9px
+        }
+
+        .ftls a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .6);
+            font-family: var(--deva);
+            transition: color 200ms
+        }
+
+        .ftls a:hover {
+            color: var(--wa)
+        }
+
+        .ftbot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px
+        }
+
+        .ftcopy {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .3)
+        }
+
+        .ftmr {
+            font-family: var(--deva);
+            font-size: 13px;
+            color: rgba(255, 255, 255, .4);
+            font-style: italic
+        }
+
+        @media(max-width:768px) {
+            .fttop {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .ftbrand {
+                grid-column: 1/-1
+            }
+        }
+
+        @media(max-width:480px) {
+            .fttop {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* SCROLL REVEAL */
+        .rv {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 650ms ease, transform 650ms ease
+        }
+
+        .rv.v {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .rvl {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 650ms ease, transform 650ms ease
+        }
+
+        .rvl.v {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .rvr {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 650ms ease, transform 650ms ease
+        }
+
+        .rvr.v {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .d1 {
+            transition-delay: 100ms
+        }
+
+        .d2 {
+            transition-delay: 200ms
+        }
+
+        .d3 {
+            transition-delay: 300ms
+        }
+
+        .d4 {
+            transition-delay: 400ms
+        }
+
+        .d5 {
+            transition-delay: 500ms
+        }
+
+        /* LANGUAGE TOGGLE */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            background: rgba(22, 163, 74, .10);
+            border: 1.5px solid var(--bg2);
+            border-radius: var(--rp);
+            padding: 4px;
+            gap: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        nav.scrolled .lang-toggle {
+            background: rgba(22, 163, 74, .08);
+        }
+
+        .lang-btn {
+            padding: 5px 11px;
+            border-radius: var(--rp);
+            font-size: 12px;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: background 200ms, color 200ms;
+            color: var(--mu);
+            letter-spacing: .3px;
+        }
+
+        .lang-btn.active {
+            background: var(--g);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(22, 163, 74, .3);
+        }
+
+        @media(max-width:768px) {
+            .lang-toggle {
+                margin-top: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav id="mnav">
+        <a href="/" class="nlogo">
+            <div class="nico">🌾</div>
+            <div class="nlabel">
+                <span class="nen">PikMitra</span>
+                <span class="nmr">पीकमित्र</span>
+            </div>
+        </a>
+        <ul class="nlinks" id="nlinks">
+            <li><a href="#how">कसं काम करतं</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">अनुभव</a></li>
+            <li><a href="#waitlist" class="ncta">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.251.624 4.35 1.7 6.152L.057 23.526a.5.5 0 0 0 .641.64l5.374-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.938 0-3.741-.564-5.261-1.536l-.374-.228-3.885 1.187 1.187-3.885-.228-.374A9.802 9.802 0 0 1 2.182 12C2.182 6.567 6.567 2.182 12 2.182S21.818 6.567 21.818 12 17.433 21.818 12 21.818z" />
+                    </svg>
+                    Free Beta जोडा
+                </a></li>
+        </ul>
+        <div class="lang-toggle" id="lang-toggle" title="Switch Language / भाषा बदला">
+            <button class="lang-btn active" id="btn-mr" onclick="setLang('mr')" aria-label="मराठी">मराठी</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+        </div>
+        <button class="ntog" id="ntog" aria-label="Menu">
+            <svg id="iham" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+            <svg id="ixcl" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" style="display:none">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+    </nav>
+
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hi">
+            <div>
+                <div class="hbadge rv">
+                    <span class="bdot"></span>
+                    Beta Waitlist Open · Wardha + Yavatmal पासून सुरुवात
+                </div>
+                <p class="hsub rv d1">AI Farming Companion · Maharashtra · WhatsApp वर मोफत</p>
+                <h1 class="hh1 rv d2">
+                    तुमच्या<br />खिशातला<br /><span class="hl">कृषी डॉक्टर.</span>
+                </h1>
+                <p class="hbody rv d3">
+                    फोटो काढा. आवाज द्या. ३० सेकंदात पिकाचा रोग ओळखा — मराठीत, व्हॉट्सअॅपवर. मोफत.
+                </p>
+                <div class="hacts rv d4">
+                    <a href="#waitlist" class="bwa">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12c0 2.251.624 4.35 1.7 6.152L.057 23.526a.5.5 0 0 0 .641.64l5.374-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.938 0-3.741-.564-5.261-1.536l-.374-.228-3.885 1.187 1.187-3.885-.228-.374A9.802 9.802 0 0 1 2.182 12C2.182 6.567 6.567 2.182 12 2.182S21.818 6.567 21.818 12 17.433 21.818 12 21.818z" />
+                        </svg>
+                        WhatsApp वर सुरू करा — मोफत
+                    </a>
+                    <a href="#how" class="bgh">कसं काम करतं ↓</a>
+                </div>
+                <div class="htrust rv d5">
+                    <div class="tavs">
+                        <span style="background:#dcfce7">👨‍🌾</span><span style="background:#fef9c3">👩‍🌾</span>
+                        <span style="background:#dbeafe">🧑‍🌾</span><span style="background:#fce7f3">👴</span>
+                    </div>
+                    <div class="ttxt">
+                        <strong>५००+ शेतकरी Waitlist वर</strong>
+                        Wardha, Yavatmal, Latur, Nashik मधून
+                    </div>
+                </div>
+            </div>
+
+            <div class="hphone rvr">
+                <div class="pframe">
+                    <div class="pnotch"></div>
+                    <div class="pscreen">
+                        <div class="wahdr">
+                            <span class="waback">‹</span>
+                            <div class="waav">🌾</div>
+                            <div>
+                                <div class="waname">PikMitra · पीकमित्र</div>
+                                <div class="wast">✓ Online · AI + Agronomist</div>
+                            </div>
+                        </div>
+                        <div class="wabody">
+                            <span class="wadate">आज · Today</span>
+                            <div class="wimgb">
+                                <div class="wimgp">🌿</div>
+                                <div class="wimgc">कापसाचं पान · Cotton leaf</div>
+                            </div>
+                            <div class="bub s">माझ्या कापसावर काहीतरी आहे 😟<div class="bt">9:14 AM ✓✓</div>
+                            </div>
+                            <div class="typing"><span></span><span></span><span></span></div>
+                            <div class="bub r">
+                                🔍 <strong>रोग ओळखला:</strong><br />
+                                <span class="tag ty">गुलाबी बोंडअळी</span><br />
+                                खात्री: <span class="tag tg">🟢 ८७%</span><br /><br />
+                                ✅ <strong>उपाय (IPM):</strong><br />
+                                फेरोमोन ट्रॅप्स — एकरी ५<br />
+                                NPV Spray — २५० ml/एकर<br /><br />
+                                📚 Source: ICAR-CICR
+                                <div class="bt">9:14 AM</div>
+                            </div>
+                            <div class="bub s">धन्यवाद! खूप उपयोग झाला 🙏<div class="bt">9:15 AM ✓✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== STATS ===== -->
+    <section id="stats">
+        <div class="sgrid inn">
+            <div class="rv">
+                <div class="snum">१३.७ लाख+</div>
+                <div class="slbl">महाराष्ट्र शेतकरी<br />Maharashtra Farmers</div>
+            </div>
+            <div class="sdiv"></div>
+            <div class="rv d2">
+                <div class="snum">३० सेकंद</div>
+                <div class="slbl">रोग ओळख वेळ<br />Disease Diagnosis Time</div>
+            </div>
+            <div class="sdiv"></div>
+            <div class="rv d4">
+                <div class="snum">₹०</div>
+                <div class="slbl">तुमची किंमत कायम<br />Your Cost. Always Free.</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how" class="sec">
+        <div class="inn">
+            <div class="scenter">
+                <p class="slabel rv">कसं काम करतं · How It Works</p>
+                <h2 class="stitle rv d1">तीन सोपे पाऊले.<br />एक मोठा फरक.</h2>
+                <p class="sbody rv d2">व्हॉट्सअॅपवर फोटो किंवा आवाज पाठवा — AI तुमच्या शेताचं उत्तर मराठीत देईल, ३०
+                    सेकंदात.</p>
+            </div>
+            <div class="swrap">
+                <div class="sgrid3">
+                    <div class="scard rv">
+                        <div class="sico">📸</div>
+                        <div class="snum2">Step 01</div>
+                        <div class="stit">फोटो किंवा आवाज पाठवा</div>
+                        <div class="sdesc">रोगट पानाचा फोटो काढा किंवा मराठीत voice note पाठवा — कोणत्याही Android phone
+                            वरून, WhatsApp वर. App download लागत नाही.</div>
+                    </div>
+                    <div class="scard rv d2">
+                        <div class="sico">🤖</div>
+                        <div class="snum2">Step 02</div>
+                        <div class="stit">AI विश्लेषण होतं</div>
+                        <div class="sdesc">Gemini Vision AI + CICR Nagpur knowledge base मिळून रोग ओळखतो — ८५%+
+                            अचूकतेसह. ICAR-certified IPM protocols वापरून उपाय सुचवतो.</div>
+                    </div>
+                    <div class="scard rv d4">
+                        <div class="sico">🎙️</div>
+                        <div class="snum2">Step 03</div>
+                        <div class="stit">मराठीत उत्तर येतं</div>
+                        <div class="sdesc">रोगाचं नाव, लक्षणं, उपाय — मराठी voice + text reply मध्ये. गरज पडली तर MPKV /
+                            CICR agronomist शी connect होतो.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="sec">
+        <div class="inn">
+            <div class="scenter">
+                <p class="slabel rv">Features · काय मिळतं</p>
+                <h2 class="stitle rv d1">एक companion,<br />चार महत्त्वाचे features.</h2>
+                <p class="sbody rv d2">रोग ओळख ते सरकारी योजना — सगळं मराठीत, सगळं मोफत, सगळं WhatsApp वर.</p>
+            </div>
+            <div class="fgrid">
+                <div class="fcard rv">
+                    <div class="fico">🔬</div>
+                    <div class="ftag">AI Disease Detection</div>
+                    <div class="ftit">AI रोग ओळख</div>
+                    <div class="fdesc">फोटो पाठवा, ३० सेकंदात रोग ओळखतो. CICR Nagpur च्या cotton experts नी validated
+                        केलेलं knowledge base. IPM-first उपाय — रासायनिक शेवटचा पर्याय.</div>
+                    <div class="chips"><span class="chip">कापूस</span><span class="chip">सोयाबीन</span><span
+                            class="chip">कांदा</span><span class="chip">१६+ रोग</span><span class="chip">CICR
+                            Validated</span></div>
+                </div>
+                <div class="fcard rv d2">
+                    <div class="fico">🎙️</div>
+                    <div class="ftag">Marathi Voice AI</div>
+                    <div class="ftit">मराठी Voice Assistant</div>
+                    <div class="fdesc">बोला, PikMitra ऐकतो. Varhadi, Western, Marathwadi — सर्व dialects समजतो.
+                        AI4Bharat IndicConformer technology — IIT Madras निर्मित, open-source.</div>
+                    <div class="chips"><span class="chip">मराठी STT</span><span class="chip">मराठी TTS</span><span
+                            class="chip">Varhadi dialect</span><span class="chip">AI4Bharat</span></div>
+                </div>
+                <div class="fcard rv d1">
+                    <div class="fico">💰</div>
+                    <div class="ftag">Live Market Prices</div>
+                    <div class="ftit">आजचा मंडई भाव</div>
+                    <div class="fdesc">Lasalgaon, Yavatmal, Latur, Pune, Nagpur — top mandis चे live prices. Agmarknet
+                        API connected. रोज सकाळी ६ वाजता तुमच्या पिकाचा भाव alert येईल.</div>
+                    <div class="chips"><span class="chip">Lasalgaon</span><span class="chip">Yavatmal</span><span
+                            class="chip">Latur</span><span class="chip">Live Daily</span></div>
+                </div>
+                <div class="fcard rv d3">
+                    <div class="fico">🏛️</div>
+                    <div class="ftag">Government Schemes</div>
+                    <div class="ftit">सरकारी योजना माहिती</div>
+                    <div class="fdesc">PM-Kisan, PMFBY, Namo Shetkari, MahaDBT — तुम्ही कोणत्या योजनेसाठी eligible आहात
+                        हे जाणून घ्या. Step-by-step मराठी मार्गदर्शन.</div>
+                    <div class="chips"><span class="chip">PM-Kisan</span><span class="chip">PMFBY</span><span
+                            class="chip">Namo Shetkari</span><span class="chip">MahaDBT</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== DEMO ===== -->
+    <section id="demo" class="sec">
+        <div class="inn">
+            <div class="dgrid">
+                <div class="rvl">
+                    <div class="dphone">
+                        <div class="wahdr">
+                            <span class="waback">‹</span>
+                            <div class="waav">🌾</div>
+                            <div>
+                                <div class="waname">PikMitra · पीकमित्र</div>
+                                <div class="wast">Online</div>
+                            </div>
+                        </div>
+                        <div class="dwa">
+                            <span class="wadate" style="align-self:center">आज</span>
+                            <div class="bub s" style="font-size:13px">आजचा कांद्याचा भाव सांग<div class="bt">10:02 AM ✓✓
+                                </div>
+                            </div>
+                            <div class="bub r" style="font-size:12px">
+                                💰 <strong>आजचा कांदा भाव</strong><br />
+                                📍 Lasalgaon APMC<br /><br />
+                                Min: ₹१,४०० · Max: ₹२,२००<br />
+                                <strong>Modal: ₹१,९५० /क्विंटल</strong><br /><br />
+                                📅 अपडेट: आज सकाळी ७:३०
+                                <div class="bt">10:02 AM</div>
+                            </div>
+                            <div class="bub s" style="font-size:13px">मला PM-Kisan मिळते का?<div class="bt">10:03 AM ✓✓
+                                </div>
+                            </div>
+                            <div class="bub r" style="font-size:12px">
+                                🏛️ <strong>तुम्ही eligible आहात:</strong><br /><br />
+                                ✅ PM-Kisan — ₹६,०००/वर्ष<br />
+                                ✅ Namo Shetkari — ₹६,०००/वर्ष<br />
+                                ℹ️ PMFBY — अधिक माहिती द्या<br /><br />
+                                अर्जासाठी "अर्ज" टाइप करा 👇
+                                <div class="bt">10:03 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rvr">
+                    <p class="slabel">Live Demo · प्रत्यक्ष उदाहरण</p>
+                    <h2 class="stitle">WhatsApp वरच<br />सगळं होतं.</h2>
+                    <p class="sbody">कोणताही app download करायची गरज नाही. PikMitra तुमच्या WhatsApp वर काम करतो — ज्या
+                        app वर तुम्ही रोज असता.</p>
+                    <div class="dbullets">
+                        <div class="dbul">
+                            <div class="dbico">📱</div>
+                            <div>
+                                <div class="dbt">Zero Install Friction</div>
+                                <div class="dbd">WhatsApp वर नंबर save करा, "नमस्कार" पाठवा — झालं सुरू!</div>
+                            </div>
+                        </div>
+                        <div class="dbul">
+                            <div class="dbico">⚡</div>
+                            <div>
+                                <div class="dbt">३० सेकंद Response</div>
+                                <div class="dbd">फोटो पाठवल्यापासून diagnosis मिळेपर्यंत ३० सेकंद किंवा कमी.</div>
+                            </div>
+                        </div>
+                        <div class="dbul">
+                            <div class="dbico">🎙️</div>
+                            <div>
+                                <div class="dbt">बोलण्याची सुविधा</div>
+                                <div class="dbd">टाइप करणं कठीण असेल तर voice note पाठवा — उत्तर आवाजात येईल.</div>
+                            </div>
+                        </div>
+                        <div class="dbul">
+                            <div class="dbico">👨‍💼</div>
+                            <div>
+                                <div class="dbt">Expert Backup</div>
+                                <div class="dbd">AI uncertain असेल तर MPKV / CICR agronomist शी connect होतं.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== TRUST ===== -->
+    <section id="trust" class="sec">
+        <div class="inn">
+            <div class="scenter">
+                <p class="slabel rv">Trust & Partnerships</p>
+                <h2 class="stitle rv d1">Science-backed.<br />Maharashtra-validated.</h2>
+                <p class="sbody rv d2">वर्ध्यातून आलो, महाराष्ट्रासाठी बनवलं. India च्या top agri research institutions
+                    शी काम करतो.</p>
+            </div>
+            <div class="tbadges">
+                <div class="tbadge rv"><span class="tbico">🔬</span><span class="tbtxt">CICR Nagpur · Cotton
+                        Research</span></div>
+                <div class="tbadge rv d1"><span class="tbico">🎓</span><span class="tbtxt">MPKV Rahuri · University
+                        Partner</span></div>
+                <div class="tbadge rv d2"><span class="tbico">🏛️</span><span class="tbtxt">MGIRI Wardha · Local
+                        Partner</span></div>
+                <div class="tbadge rv d3"><span class="tbico">⚡</span><span class="tbtxt">NVIDIA Inception
+                        Program</span></div>
+                <div class="tbadge rv d4"><span class="tbico">☁️</span><span class="tbtxt">Microsoft for Startups</span>
+                </div>
+                <div class="tbadge rv d5"><span class="tbico">🤖</span><span class="tbtxt">AI4Bharat · IIT Madras</span>
+                </div>
+            </div>
+            <div class="wbox rv">
+                <div class="wem">🏡</div>
+                <div class="wtit">विदर्भातून उगवलेली, महाराष्ट्रासाठी</div>
+                <div class="wdsc">Founder मूळचा वर्धा जिल्ह्याचा. कापूस शेतकऱ्यांची वेदना आम्हाला माहीत आहे — कारण ती
+                    आमच्या कुटुंबाची वेदना आहे. PikMitra Wardha मधून बनतो, Vidarbha साठी जगतो.</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="sec">
+        <div class="inn">
+            <div class="scenter">
+                <p class="slabel rv">शेतकरी अनुभव · Farmer Stories</p>
+                <h2 class="stitle rv d1">शेतकरी सांगतात.</h2>
+                <p class="sbody rv d2">Beta testers चे खरे अनुभव — Wardha, Yavatmal, Nashik, Latur मधून.</p>
+            </div>
+            <div class="tgrid">
+                <div class="tcard rv">
+                    <div class="tstars">★★★★★</div>
+                    <div class="tq">पीकमित्रने बोंडअळी वेळीच ओळखली. माझ्या ३ एकर कापसाचा पीक वाचला आणि ₹४५,००० चा नुकसान
+                        टळला. मराठीत बोलतो, मराठीत उत्तर देतो — हे अॅप आमच्यासाठीच बनलं आहे.</div>
+                    <div class="tau">
+                        <div class="tav">👨‍🌾</div>
+                        <div>
+                            <div class="tname">रमेश पाटील</div>
+                            <div class="trole">कापूस शेतकरी, यवतमाळ</div>
+                        </div>
+                        <span class="tcrop">कापूस</span>
+                    </div>
+                </div>
+                <div class="tcard rv d2">
+                    <div class="tstars">★★★★★</div>
+                    <div class="tq">आता कांद्याचा लासलगावचा भाव थेट WhatsApp वर येतो. व्यापाऱ्याकडून फसवणूक होत नाही.
+                        PM-Kisan साठी कसा अर्ज करायचा तेही PikMitra ने सांगितलं — सोप्या मराठीत.</div>
+                    <div class="tau">
+                        <div class="tav">👩‍🌾</div>
+                        <div>
+                            <div class="tname">सुनीता भोसले</div>
+                            <div class="trole">कांदा उत्पादक, नाशिक</div>
+                        </div>
+                        <span class="tcrop">कांदा</span>
+                    </div>
+                </div>
+                <div class="tcard rv d4">
+                    <div class="tstars">★★★★★</div>
+                    <div class="tq">मराठीत बोलतो, मराठीत उत्तर देतो. आधी app install करायला घाबरायचो — WhatsApp वर
+                        असल्यामुळे लगेच सुरू केलं. सोयाबीनचा rust रोग वेळीच ओळखला.</div>
+                    <div class="tau">
+                        <div class="tav">👴</div>
+                        <div>
+                            <div class="tname">विठ्ठल शेंडे</div>
+                            <div class="trole">सोयाबीन शेतकरी, लातूर</div>
+                        </div>
+                        <span class="tcrop">सोयाबीन</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== WAITLIST ===== -->
+    <section id="waitlist">
+        <div class="wli">
+            <div class="wlbadge rv">
+                <span class="bdot"></span>
+                मोफत Beta — फक्त ५०० जागा उरल्या आहेत
+            </div>
+            <h2 class="wlt rv d1">आत्ताच नाव नोंदवा.<br />मोफत Beta मध्ये सामील व्हा.</h2>
+            <p class="wls rv d2">PikMitra launch होताच तुम्हाला WhatsApp वर कळवू. कोणताही charge नाही. कधीही spam नाही.
+            </p>
+
+            <div class="wlform rv d3">
+                <div class="fform" id="wlff">
+                    <div class="frow">
+                        <div class="fg">
+                            <label for="wname">तुमचं नाव · Your Name</label>
+                            <input type="text" id="wname" placeholder="रमेश पाटील" required />
+                        </div>
+                        <div class="fg">
+                            <label for="wphone">WhatsApp नंबर</label>
+                            <input type="tel" id="wphone" placeholder="+91 98765 43210" required />
+                        </div>
+                    </div>
+                    <div class="frow">
+                        <div class="fg">
+                            <div class="selw">
+                                <label for="wdist">जिल्हा · District</label>
+                                <select id="wdist" required>
+                                    <option value="">जिल्हा निवडा...</option>
+                                    <option>Wardha · वर्धा</option>
+                                    <option>Yavatmal · यवतमाळ</option>
+                                    <option>Amravati · अमरावती</option>
+                                    <option>Nagpur · नागपूर</option>
+                                    <option>Latur · लातूर</option>
+                                    <option>Nanded · नांदेड</option>
+                                    <option>Nashik · नाशिक</option>
+                                    <option>Pune · पुणे</option>
+                                    <option>Ahmednagar · अहमदनगर</option>
+                                    <option>Solapur · सोलापूर</option>
+                                    <option>Kolhapur · कोल्हापूर</option>
+                                    <option>Other · इतर</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <div class="selw">
+                                <label for="wcrop">मुख्य पीक · Main Crop</label>
+                                <select id="wcrop" required>
+                                    <option value="">पीक निवडा...</option>
+                                    <option>कापूस · Cotton</option>
+                                    <option>सोयाबीन · Soybean</option>
+                                    <option>कांदा · Onion</option>
+                                    <option>द्राक्षे · Grapes</option>
+                                    <option>टमाटो · Tomato</option>
+                                    <option>तूर / चणा · Pulses</option>
+                                    <option>ऊस · Sugarcane</option>
+                                    <option>केळी · Banana</option>
+                                    <option>इतर · Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="fsub" onclick="handleWaitlist(event)">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12c0 2.251.624 4.35 1.7 6.152L.057 23.526a.5.5 0 0 0 .641.64l5.374-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.938 0-3.741-.564-5.261-1.536l-.374-.228-3.885 1.187 1.187-3.885-.228-.374A9.802 9.802 0 0 1 2.182 12C2.182 6.567 6.567 2.182 12 2.182S21.818 6.567 21.818 12 17.433 21.818 12 21.818z" />
+                        </svg>
+                        📱 Free Beta मध्ये सामील व्हा
+                    </button>
+                    <p class="fnote">🔒 तुमची माहिती सुरक्षित आहे. Spam नाही. कधीही unsubscribe करता येईल.</p>
+                </div>
+                <div class="fsuc" id="wlsuc">
+                    <div class="scico">🌾</div>
+                    <div class="sct">नाव नोंदवलं गेलं! धन्यवाद.</div>
+                    <div class="scb">PikMitra launch होताच तुम्हाला WhatsApp वर कळवू.<br />Wardha + Yavatmal पहिल्यांदा
+                        — तुम्हाला priority access मिळेल.</div>
+                </div>
+            </div>
+
+            <div class="wlcount rv d4">
+                <span class="wldot"></span>
+                <span class="wlct" id="wlctxt">५२३+ शेतकरी आधीच waitlist वर — Wardha, Yavatmal, Latur, Nashik
+                    मधून</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="ftin">
+            <div class="fttop">
+                <div class="ftbrand">
+                    <div class="ftlogo">
+                        <div class="ftlic">🌾</div>
+                        <span class="ftln">PikMitra · पीकमित्र</span>
+                    </div>
+                    <div class="fttag">
+                        विदर्भातून उगवलेली, महाराष्ट्रासाठी जगणारी.<br />
+                        Built in Wardha — India's cotton heartland.
+                    </div>
+                    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+                        <a href="#waitlist"
+                            style="display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;padding:10px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:var(--deva);transition:transform 200ms,opacity 200ms"
+                            onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                            📱 WhatsApp वर जोडा
+                        </a>
+                        <a href="mailto:hello@pikmitra.in"
+                            style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:10px 18px;border-radius:9999px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.15);font-family:var(--deva);transition:color 200ms"
+                            onmouseover="this.style.color='#25D366'"
+                            onmouseout="this.style.color='rgba(255,255,255,.7)'">
+                            ✉️ hello@pikmitra.in
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ftct">PikMitra</div>
+                    <ul class="ftls">
+                        <li><a href="#how">कसं काम करतं</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">शेतकरी अनुभव</a></li>
+                        <li><a href="#waitlist">Beta Waitlist</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="ftct">Resources</div>
+                    <ul class="ftls">
+                        <li><a href="https://ai4bharat.iitm.ac.in" target="_blank" rel="noopener">AI4Bharat · IIT
+                                Madras</a></li>
+                        <li><a href="https://cicr.org.in" target="_blank" rel="noopener">CICR Nagpur</a></li>
+                        <li><a href="https://mpkv.ac.in" target="_blank" rel="noopener">MPKV Rahuri</a></li>
+                        <li><a href="https://mgiri.org" target="_blank" rel="noopener">MGIRI Wardha</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="ftct">Company</div>
+                    <ul class="ftls">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="mailto:hello@pikmitra.in">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ftbot">
+                <div class="ftcopy">© 2026 PikMitra Technologies Pvt Ltd · Wardha, Maharashtra</div>
+                <div class="ftmr">विदर्भातून उगवलेली, महाराष्ट्रासाठी ❤️</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Nav scroll
+        const nav = document.getElementById('mnav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile nav
+        const ntog = document.getElementById('ntog');
+        const nlinks = document.getElementById('nlinks');
+        const iham = document.getElementById('iham');
+        const ixcl = document.getElementById('ixcl');
+        ntog.addEventListener('click', () => {
+            const open = nlinks.classList.toggle('open');
+            iham.style.display = open ? 'none' : 'block';
+            ixcl.style.display = open ? 'block' : 'none';
+        });
+        nlinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                nlinks.classList.remove('open');
+                iham.style.display = 'block';
+                ixcl.style.display = 'none';
+            });
+        });
+
+        // Scroll reveal via IntersectionObserver
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('v');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.rv,.rvl,.rvr').forEach(el => io.observe(el));
+
+        // Waitlist form handler
+        function handleWaitlist(e) {
+            e.preventDefault();
+            const name = document.getElementById('wname').value.trim();
+            const phone = document.getElementById('wphone').value.trim();
+            const dist = document.getElementById('wdist').value;
+            const crop = document.getElementById('wcrop').value;
+            if (!name || !phone || !dist || !crop) {
+                alert('कृपया सर्व माहिती भरा · Please fill all fields.');
+                return;
+            }
+            // TODO: Replace with your backend endpoint / Firebase / Airtable
+            // fetch('/api/waitlist', { method:'POST', body: JSON.stringify({name,phone,dist,crop}) });
+            document.getElementById('wlff').classList.add('hide');
+            document.getElementById('wlsuc').classList.add('show');
+            const ct = document.getElementById('wlctxt');
+            if (ct) ct.textContent = '५२४+ शेतकरी आधीच waitlist वर — Wardha, Yavatmal, Latur, Nashik मधून';
+        }
+
+        // ── LANGUAGE TOGGLE ──────────────────────────────────────────────
+        let currentLang = 'mr';
+
+        const T = {
+            mr: {
+                // Nav
+                'nav-how': 'कसं काम करतं',
+                'nav-exp': 'अनुभव',
+                'nav-cta': 'Free Beta जोडा',
+                // Hero
+                'hbadge-txt': 'Beta Waitlist Open · Wardha + Yavatmal पासून सुरुवात',
+                'hsub-txt': 'AI Farming Companion · Maharashtra · WhatsApp वर मोफत',
+                'hh1-html': 'तुमच्या<br/>खिशातला<br/><span class="hl">कृषी डॉक्टर.</span>',
+                'hbody-txt': 'फोटो काढा. आवाज द्या. ३० सेकंदात पिकाचा रोग ओळखा — मराठीत, व्हॉट्सअॅपवर. मोफत.',
+                'hcta-txt': 'WhatsApp वर सुरू करा — मोफत',
+                'hcta2-txt': 'कसं काम करतं ↓',
+                'htrust1-txt': '५००+ शेतकरी Waitlist वर',
+                'htrust2-txt': 'Wardha, Yavatmal, Latur, Nashik मधून',
+                // Stats
+                'snum1-txt': '१३.७ लाख+',
+                'slbl1-txt': 'महाराष्ट्र शेतकरी · Maharashtra Farmers',
+                'snum2-txt': '३० सेकंद',
+                'slbl2-txt': 'रोग ओळख वेळ · Disease Diagnosis Time',
+                'snum3-txt': '₹०',
+                'slbl3-txt': 'तुमची किंमत कायम · Your Cost. Always Free.',
+                // How it works
+                'how-label': 'कसं काम करतं · How It Works',
+                'how-title': 'तीन सोपे पाऊले.<br/>एक मोठा फरक.',
+                'how-body': 'व्हॉट्सअॅपवर फोटो किंवा आवाज पाठवा — AI तुमच्या शेताचं उत्तर मराठीत देईल, ३० सेकंदात.',
+                's1-num': 'Step 01', 's1-tit': 'फोटो किंवा आवाज पाठवा',
+                's1-desc': 'रोगट पानाचा फोटो काढा किंवा मराठीत voice note पाठवा — कोणत्याही Android phone वरून, WhatsApp वर. App download लागत नाही.',
+                's2-num': 'Step 02', 's2-tit': 'AI विश्लेषण होतं',
+                's2-desc': 'Gemini Vision AI + CICR Nagpur knowledge base मिळून रोग ओळखतो — ८५%+ अचूकतेसह. ICAR-certified IPM protocols वापरून उपाय सुचवतो.',
+                's3-num': 'Step 03', 's3-tit': 'मराठीत उत्तर येतं',
+                's3-desc': 'रोगाचं नाव, लक्षणं, उपाय — मराठी voice + text reply मध्ये. गरज पडली तर MPKV / CICR agronomist शी connect होतो.',
+                // Features
+                'feat-label': 'Features · काय मिळतं',
+                'feat-title': 'एक companion,<br/>चार महत्त्वाचे features.',
+                'feat-body': 'रोग ओळख ते सरकारी योजना — सगळं मराठीत, सगळं मोफत, सगळं WhatsApp वर.',
+                'f1-tit': 'AI रोग ओळख', 'f1-desc': 'फोटो पाठवा, ३० सेकंदात रोग ओळखतो. CICR Nagpur च्या cotton experts नी validated केलेलं knowledge base. IPM-first उपाय — रासायनिक शेवटचा पर्याय.',
+                'f2-tit': 'मराठी Voice Assistant', 'f2-desc': 'बोला, PikMitra ऐकतो. Varhadi, Western, Marathwadi — सर्व dialects समजतो. AI4Bharat IndicConformer technology — IIT Madras निर्मित, open-source.',
+                'f3-tit': 'आजचा मंडई भाव', 'f3-desc': 'Lasalgaon, Yavatmal, Latur, Pune, Nagpur — top mandis चे live prices. Agmarknet API connected. रोज सकाळी ६ वाजता तुमच्या पिकाचा भाव alert येईल.',
+                'f4-tit': 'सरकारी योजना माहिती', 'f4-desc': 'PM-Kisan, PMFBY, Namo Shetkari, MahaDBT — तुम्ही कोणत्या योजनेसाठी eligible आहात हे जाणून घ्या. Step-by-step मराठी मार्गदर्शन.',
+                // Demo
+                'demo-label': 'Live Demo · प्रत्यक्ष उदाहरण',
+                'demo-title': 'WhatsApp वरच<br/>सगळं होतं.',
+                'demo-body': 'कोणताही app download करायची गरज नाही. PikMitra तुमच्या WhatsApp वर काम करतो — ज्या app वर तुम्ही रोज असता.',
+                'db1-t': 'Zero Install Friction', 'db1-d': 'WhatsApp वर नंबर save करा, "नमस्कार" पाठवा — झालं सुरू!',
+                'db2-t': '३० सेकंद Response', 'db2-d': 'फोटो पाठवल्यापासून diagnosis मिळेपर्यंत ३० सेकंद किंवा कमी.',
+                'db3-t': 'बोलण्याची सुविधा', 'db3-d': 'टाइप करणं कठीण असेल तर voice note पाठवा — उत्तर आवाजात येईल.',
+                'db4-t': 'Expert Backup', 'db4-d': 'AI uncertain असेल तर MPKV / CICR agronomist शी connect होतं.',
+                // Trust
+                'trust-label': 'Trust & Partnerships',
+                'trust-title': 'Science-backed.<br/>Maharashtra-validated.',
+                'trust-body': 'वर्ध्यातून आलो, महाराष्ट्रासाठी बनवलं. India च्या top agri research institutions शी काम करतो.',
+                'wardha-tit': 'विदर्भातून उगवलेली, महाराष्ट्रासाठी',
+                'wardha-dsc': 'Founder मूळचा वर्धा जिल्ह्याचा. कापूस शेतकऱ्यांची वेदना आम्हाला माहीत आहे — कारण ती आमच्या कुटुंबाची वेदना आहे. PikMitra Wardha मधून बनतो, Vidarbha साठी जगतो.',
+                // Testimonials
+                'testi-label': 'शेतकरी अनुभव · Farmer Stories',
+                'testi-title': 'शेतकरी सांगतात.',
+                'testi-body': 'Beta testers चे खरे अनुभव — Wardha, Yavatmal, Nashik, Latur मधून.',
+                't1-q': 'पीकमित्रने बोंडअळी वेळीच ओळखली. माझ्या ३ एकर कापसाचा पीक वाचला आणि ₹४५,००० चा नुकसान टळला. मराठीत बोलतो, मराठीत उत्तर देतो — हे अॅप आमच्यासाठीच बनलं आहे.',
+                't1-name': 'रमेश पाटील', 't1-role': 'कापूस शेतकरी, यवतमाळ',
+                't2-q': 'आता कांद्याचा लासलगावचा भाव थेट WhatsApp वर येतो. व्यापाऱ्याकडून फसवणूक होत नाही. PM-Kisan साठी कसा अर्ज करायचा तेही PikMitra ने सांगितलं — सोप्या मराठीत.',
+                't2-name': 'सुनीता भोसले', 't2-role': 'कांदा उत्पादक, नाशिक',
+                't3-q': 'मराठीत बोलतो, मराठीत उत्तर देतो. आधी app install करायला घाबरायचो — WhatsApp वर असल्यामुळे लगेच सुरू केलं. सोयाबीनचा rust रोग वेळीच ओळखला.',
+                't3-name': 'विठ्ठल शेंडे', 't3-role': 'सोयाबीन शेतकरी, लातूर',
+                // Waitlist
+                'wl-badge': 'मोफत Beta — फक्त ५०० जागा उरल्या आहेत',
+                'wl-title': 'आत्ताच नाव नोंदवा.<br />मोफत Beta मध्ये सामील व्हा.',
+                'wl-sub': 'PikMitra launch होताच तुम्हाला WhatsApp वर कळवू. कोणताही charge नाही. कधीही spam नाही.',
+                'wl-cta': '📱 Free Beta मध्ये सामील व्हा',
+                'wl-note': '🔒 तुमची माहिती सुरक्षित आहे. Spam नाही. कधीही unsubscribe करता येईल.',
+                'wl-count': '५२३+ शेतकरी आधीच waitlist वर — Wardha, Yavatmal, Latur, Nashik मधून',
+                // Footer
+                'ft-tag': 'विदर्भातून उगवलेली, महाराष्ट्रासाठी जगणारी.\nBuilt in Wardha — India\'s cotton heartland.',
+                'ft-mr': 'विदर्भातून उगवलेली, महाराष्ट्रासाठी ❤️',
+            },
+            en: {
+                // Nav
+                'nav-how': 'How It Works',
+                'nav-exp': 'Stories',
+                'nav-cta': 'Join Free Beta',
+                // Hero
+                'hbadge-txt': 'Beta Waitlist Open · Starting from Wardha + Yavatmal',
+                'hsub-txt': 'AI Farming Companion · Maharashtra · Free on WhatsApp',
+                'hh1-html': 'Your Pocket<br/>Farming<br/><span class="hl">Doctor.</span>',
+                'hbody-txt': 'Take a photo. Send a voice note. Get your crop disease identified in 30 seconds — in Marathi, on WhatsApp. Free.',
+                'hcta-txt': 'Start on WhatsApp — Free',
+                'hcta2-txt': 'How It Works ↓',
+                'htrust1-txt': '500+ Farmers on Waitlist',
+                'htrust2-txt': 'From Wardha, Yavatmal, Latur, Nashik',
+                // Stats
+                'snum1-txt': '13.7M+',
+                'slbl1-txt': 'Maharashtra Farmers',
+                'snum2-txt': '30 Sec',
+                'slbl2-txt': 'Disease Diagnosis Time',
+                'snum3-txt': '₹0',
+                'slbl3-txt': 'Your Cost. Always Free.',
+                // How it works
+                'how-label': 'How It Works',
+                'how-title': 'Three simple steps.<br/>One big difference.',
+                'how-body': 'Send a photo or voice note on WhatsApp — AI replies in Marathi with a diagnosis and treatment plan in 30 seconds.',
+                's1-num': 'Step 01', 's1-tit': 'Take a photo or voice note',
+                's1-desc': 'Photograph a diseased leaf or send a Marathi voice note — from any Android phone on WhatsApp. No app to download.',
+                's2-num': 'Step 02', 's2-tit': 'AI analyses instantly',
+                's2-desc': 'Gemini Vision AI + CICR Nagpur knowledge base identifies the disease — with 85%+ accuracy using ICAR-certified IPM protocols.',
+                's3-num': 'Step 03', 's3-tit': 'Reply in Marathi',
+                's3-desc': 'Disease name, symptoms, IPM-first treatment — in Marathi voice + text. If uncertain, connects to an MPKV / CICR agronomist.',
+                // Features
+                'feat-label': 'Features',
+                'feat-title': 'One companion,<br/>four powerful features.',
+                'feat-body': 'From disease detection to government schemes — all in Marathi, all free, all on WhatsApp.',
+                'f1-tit': 'AI Disease Detection', 'f1-desc': 'Send a photo, get a diagnosis in 30 seconds. Knowledge base validated by CICR Nagpur cotton experts. IPM-first treatment — chemicals as a last resort.',
+                'f2-tit': 'Marathi Voice Assistant', 'f2-desc': 'Speak, PikMitra listens. Understands Varhadi, Western, and Marathwadi dialects. Powered by AI4Bharat IndicConformer — built at IIT Madras, open-source.',
+                'f3-tit': 'Live Mandi Prices', 'f3-desc': 'Live prices from Lasalgaon, Yavatmal, Latur, Pune, Nagpur — top Maharashtra mandis. Connected to Agmarknet API. Daily morning price alert at 6 AM.',
+                'f4-tit': 'Government Schemes Guide', 'f4-desc': 'PM-Kisan, PMFBY, Namo Shetkari, MahaDBT — know which schemes you are eligible for. Step-by-step guidance in simple Marathi.',
+                // Demo
+                'demo-label': 'Live Demo',
+                'demo-title': 'Everything happens<br/>on WhatsApp.',
+                'demo-body': 'No app download needed. PikMitra works on the WhatsApp you already use every day.',
+                'db1-t': 'Zero Install Friction', 'db1-d': 'Save the number on WhatsApp, send "Hello" — and you\'re live.',
+                'db2-t': '30-Second Response', 'db2-d': 'From photo sent to diagnosis received — 30 seconds or less.',
+                'db3-t': 'Voice-first design', 'db3-d': 'Can\'t type? Send a voice note — you\'ll get a voice reply back.',
+                'db4-t': 'Expert Backup', 'db4-d': 'If AI is uncertain, it connects to an MPKV / CICR agronomist instantly.',
+                // Trust
+                'trust-label': 'Trust & Partnerships',
+                'trust-title': 'Science-backed.<br/>Maharashtra-validated.',
+                'trust-body': 'Built in Wardha, built for Maharashtra. Working with India\'s top agri research institutions.',
+                'wardha-tit': 'Born in Vidarbha, built for Maharashtra',
+                'wardha-dsc': 'The founder is from Wardha district. We understand the pain of cotton farmers — because it is our family\'s pain. PikMitra is built in Wardha, lives for Vidarbha.',
+                // Testimonials
+                'testi-label': 'Farmer Stories',
+                'testi-title': 'Farmers speak.',
+                'testi-body': 'Real experiences from beta testers — Wardha, Yavatmal, Nashik, Latur.',
+                't1-q': 'PikMitra identified Pink Bollworm on time. My 3-acre cotton crop was saved and ₹45,000 in losses were prevented. Speaks Marathi, replies in Marathi — this app was built for us.',
+                't1-name': 'Ramesh Patil', 't1-role': 'Cotton Farmer, Yavatmal',
+                't2-q': 'Now Lasalgaon onion prices come directly on WhatsApp. No more being cheated by traders. PikMitra also explained how to apply for PM-Kisan — in simple Marathi.',
+                't2-name': 'Sunita Bhosale', 't2-role': 'Onion Grower, Nashik',
+                't3-q': 'It speaks Marathi, it replies in Marathi. I was afraid to install apps before — being on WhatsApp made it easy. Identified soybean rust disease just in time.',
+                't3-name': 'Vitthal Shende', 't3-role': 'Soybean Farmer, Latur',
+                // Waitlist
+                'wl-badge': 'Free Beta — Only 500 spots remaining',
+                'wl-title': 'Register now.<br />Join the Free Beta.',
+                'wl-sub': 'We\'ll notify you on WhatsApp when PikMitra launches. No charges. No spam. Ever.',
+                'wl-cta': '📱 Join Free Beta',
+                'wl-note': '🔒 Your information is safe. No spam. Unsubscribe anytime.',
+                'wl-count': '523+ farmers already on the waitlist — from Wardha, Yavatmal, Latur, Nashik',
+                // Footer
+                'ft-tag': 'Born in Vidarbha, built for Maharashtra.\nBuilt in Wardha — India\'s cotton heartland.',
+                'ft-mr': 'Born in Vidarbha, for Maharashtra ❤️',
+            }
+        };
+
+        // Map of translation key → DOM element selector + property
+        // Format: [key, selector, 'text'|'html', nth-of-type index (0=all)]
+        const BINDINGS = [
+            ['nav-how', '#nlinks li:nth-child(1) a', 'text'],
+            ['nav-exp', '#nlinks li:nth-child(3) a', 'text'],
+            ['nav-cta', '.ncta', 'html'],
+            ['hbadge-txt', '.hbadge', 'text'],
+            ['hsub-txt', '.hsub', 'text'],
+            ['hh1-html', '.hh1', 'html'],
+            ['hbody-txt', '.hbody', 'text'],
+            ['hcta-txt', '.bwa', 'html'], // has SVG — keep SVG
+            ['hcta2-txt', '.bgh', 'text'],
+            ['htrust1-txt', '.ttxt strong', 'text'],
+            ['htrust2-txt', '.ttxt', 'text', 1], // second text node
+            ['snum1-txt', '.sgrid .stat-item:nth-child(1) .snum', 'text'],
+            ['slbl1-txt', '.sgrid .stat-item:nth-child(1) .slbl', 'text'],
+            ['snum2-txt', '.sgrid .stat-item:nth-child(3) .snum', 'text'],
+            ['slbl2-txt', '.sgrid .stat-item:nth-child(3) .slbl', 'text'],
+            ['snum3-txt', '.sgrid .stat-item:nth-child(5) .snum', 'text'],
+            ['slbl3-txt', '.sgrid .stat-item:nth-child(5) .slbl', 'text'],
+        ];
+
+        function setLang(lang) {
+            if (lang === currentLang) return;
+            currentLang = lang;
+            const d = T[lang];
+            document.documentElement.lang = lang === 'mr' ? 'mr' : 'en';
+            document.getElementById('btn-mr').classList.toggle('active', lang === 'mr');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            const setText = (sel, val) => {
+                document.querySelectorAll(sel).forEach(el => { el.textContent = val; });
+            };
+            const setHTML = (sel, val) => {
+                document.querySelectorAll(sel).forEach(el => { el.innerHTML = val; });
+            };
+
+            // Nav
+            setText('#nlinks li:nth-child(1) a', d['nav-how']);
+            setText('#nlinks li:nth-child(3) a', d['nav-exp']);
+            // keep SVG in nav-cta, just update text node
+            const ncta = document.querySelector('.ncta');
+            if (ncta) {
+                const svg = ncta.querySelector('svg');
+                ncta.textContent = ' ' + d['nav-cta'];
+                if (svg) ncta.prepend(svg);
+            }
+            // Hero badge — keep dot span
+            const hbadge = document.querySelector('.hbadge');
+            if (hbadge) {
+                const dot = hbadge.querySelector('.bdot');
+                hbadge.textContent = ' ' + d['hbadge-txt'];
+                if (dot) hbadge.prepend(dot);
+            }
+            setText('.hsub', d['hsub-txt']);
+            setHTML('.hh1', d['hh1-html']);
+            setText('.hbody', d['hbody-txt']);
+            // CTA button — preserve SVG
+            const bcta = document.querySelector('.bwa');
+            if (bcta) {
+                const svg = bcta.querySelector('svg');
+                bcta.textContent = ' ' + d['hcta-txt'];
+                if (svg) bcta.prepend(svg);
+            }
+            setText('.bgh', d['hcta2-txt']);
+            // Trust
+            setText('.ttxt strong', d['htrust1-txt']);
+            const ttxt = document.querySelector('.ttxt');
+            if (ttxt) {
+                const strong = ttxt.querySelector('strong');
+                ttxt.innerHTML = '';
+                if (strong) { strong.textContent = d['htrust1-txt']; ttxt.appendChild(strong); }
+                ttxt.appendChild(document.createTextNode(d['htrust2-txt']));
+            }
+            // Stats
+            const statItems = document.querySelectorAll('.sgrid > .stat-item');
+            if (statItems[0]) { statItems[0].querySelector('.snum').textContent = d['snum1-txt']; statItems[0].querySelector('.slbl').textContent = d['slbl1-txt']; }
+            if (statItems[1]) { statItems[1].querySelector('.snum').textContent = d['snum2-txt']; statItems[1].querySelector('.slbl').textContent = d['slbl2-txt']; }
+            if (statItems[2]) { statItems[2].querySelector('.snum').textContent = d['snum3-txt']; statItems[2].querySelector('.slbl').textContent = d['slbl3-txt']; }
+            // How it works
+            setText('#how .slabel', d['how-label']);
+            setHTML('#how .stitle', d['how-title']);
+            setText('#how .sbody', d['how-body']);
+            const scards = document.querySelectorAll('.sgrid3 .scard');
+            const skeys = [['s1-num', 's1-tit', 's1-desc'], ['s2-num', 's2-tit', 's2-desc'], ['s3-num', 's3-tit', 's3-desc']];
+            scards.forEach((c, i) => {
+                if (!skeys[i]) return;
+                c.querySelector('.snum2').textContent = d[skeys[i][0]];
+                c.querySelector('.stit').textContent = d[skeys[i][1]];
+                c.querySelector('.sdesc').textContent = d[skeys[i][2]];
+            });
+            // Features
+            setText('#features .slabel', d['feat-label']);
+            setHTML('#features .stitle', d['feat-title']);
+            setText('#features .sbody', d['feat-body']);
+            const fcards = document.querySelectorAll('.fgrid .fcard');
+            const fkeys = [['f1-tit', 'f1-desc'], ['f2-tit', 'f2-desc'], ['f3-tit', 'f3-desc'], ['f4-tit', 'f4-desc']];
+            fcards.forEach((c, i) => {
+                if (!fkeys[i]) return;
+                c.querySelector('.ftit').textContent = d[fkeys[i][0]];
+                c.querySelector('.fdesc').textContent = d[fkeys[i][1]];
+            });
+            // Demo
+            setText('#demo .slabel', d['demo-label']);
+            setHTML('#demo .stitle', d['demo-title']);
+            setText('#demo .sbody', d['demo-body']);
+            const dbuls = document.querySelectorAll('.dbullets .dbul');
+            const dbkeys = [['db1-t', 'db1-d'], ['db2-t', 'db2-d'], ['db3-t', 'db3-d'], ['db4-t', 'db4-d']];
+            dbuls.forEach((b, i) => {
+                if (!dbkeys[i]) return;
+                b.querySelector('.dbt').textContent = d[dbkeys[i][0]];
+                b.querySelector('.dbd').textContent = d[dbkeys[i][1]];
+            });
+            // Trust
+            setText('#trust .slabel', d['trust-label']);
+            setHTML('#trust .stitle', d['trust-title']);
+            setText('#trust .sbody', d['trust-body']);
+            setText('.wtit', d['wardha-tit']);
+            setText('.wdsc', d['wardha-dsc']);
+            // Testimonials
+            setText('#testimonials .slabel', d['testi-label']);
+            setText('#testimonials .stitle', d['testi-title']);
+            setText('#testimonials .sbody', d['testi-body']);
+            const tcards = document.querySelectorAll('.tgrid .tcard');
+            const tkeys = [['t1-q', 't1-name', 't1-role'], ['t2-q', 't2-name', 't2-role'], ['t3-q', 't3-name', 't3-role']];
+            tcards.forEach((c, i) => {
+                if (!tkeys[i]) return;
+                c.querySelector('.tq').textContent = d[tkeys[i][0]];
+                c.querySelector('.tname').textContent = d[tkeys[i][1]];
+                c.querySelector('.trole').textContent = d[tkeys[i][2]];
+            });
+            // Waitlist
+            const wlb = document.querySelector('.wlbadge');
+            if (wlb) { const dot = wlb.querySelector('.bdot'); wlb.textContent = ' ' + d['wl-badge']; if (dot) wlb.prepend(dot); }
+            setHTML('.wlt', d['wl-title']);
+            setText('.wls', d['wl-sub']);
+            const fsub = document.querySelector('.fsub');
+            if (fsub) { const svg = fsub.querySelector('svg'); fsub.textContent = ' ' + d['wl-cta']; if (svg) fsub.prepend(svg); }
+            setText('.fnote', d['wl-note']);
+            const wlct = document.getElementById('wlctxt');
+            if (wlct) wlct.textContent = d['wl-count'];
+            // Footer
+            setText('.fttag', d['ft-tag']);
+            setText('.ftmr', d['ft-mr']);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

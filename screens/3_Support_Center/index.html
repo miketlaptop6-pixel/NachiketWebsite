@@ -1,0 +1,179 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#063ff9",
+                        "background-custom": "#F9F9F9",
+                        "text-custom": "#111111",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .premium-border {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .premium-gradient {
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-custom text-text-custom min-h-screen">
+<div class="relative flex min-h-screen flex-col">
+<!-- Top Navigation -->
+<header class="border-b border-slate-200 px-6 lg:px-20 py-4 flex items-center justify-between bg-background-custom sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-white text-xl">layers</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">ResumeHub.in</h2>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Features</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Templates</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-bold px-6 py-2 rounded border border-slate-200 hover:bg-slate-100 transition-all">Sign In</button>
+<div class="size-10 rounded-full border border-primary/30 p-0.5">
+<img alt="User Avatar" class="rounded-full w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf_dz1ycb57zEJhmQgaUZt4szr1mumYZyJACUsM4fYDZhgle3BOzHUgiWhqiFIU2QUtWJxM2I5UwjZekLzDrc95oDVT752ZJFCXFUYBZoaRy4mSgBBSIZsKL32PNq_jJIUbC46pGRN3A2YWDwrv2zUIkFPQEuDAynU-bAfuZtWpKFqeewsej29h-ctqUgDmnNZbsjEptexWh1n4JTvcCVDAwWY2g24cYMaJC0V04ygqExBg4dGzrk4cf_7dZ8veJWas22BXf8jmQg"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-16">
+<!-- Hero Section -->
+<div class="flex flex-col items-center text-center mb-16">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4">Support Center</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 max-w-3xl">How can we help you today?</h1>
+<p class="text-slate-500 text-lg max-w-xl">Search our knowledge base or browse common topics below to get started with your professional resume.</p>
+</div>
+<!-- Search Bar -->
+<div class="max-w-3xl mx-auto mb-24 w-full">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/5 blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity"></div>
+<label class="relative flex items-center w-full bg-white border border-slate-200 rounded-lg overflow-hidden focus-within:border-primary transition-all p-1 shadow-sm">
+<div class="pl-5 text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-lg py-4 px-4 text-text-custom placeholder-slate-400" placeholder="Search for articles, guides, or keywords..." type="text"/>
+<button class="bg-primary text-white font-bold px-8 py-4 rounded-lg hover:brightness-110 transition-all uppercase tracking-wider text-xs">
+                        Search
+                    </button>
+</label>
+</div>
+</div>
+<!-- Common Topics Grid -->
+<div class="mb-12">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tight">Common Topics</h2>
+<div class="h-1 w-12 bg-primary mt-2"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Account -->
+<div class="group relative flex flex-col p-8 rounded-xl border border-slate-200 bg-white hover:border-primary/50 transition-all premium-gradient shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<div class="p-3 bg-slate-50 rounded group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-primary transition-colors">person</span>
+</div>
+<span class="text-slate-300 font-mono text-sm">01.</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Account</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Manage your profile, security settings, and personal data preferences.</p>
+<div class="mt-8 flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Billing -->
+<div class="group relative flex flex-col p-8 rounded-xl border border-slate-200 bg-white hover:border-primary/50 transition-all premium-gradient shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<div class="p-3 bg-slate-50 rounded group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-primary transition-colors">credit_card</span>
+</div>
+<span class="text-slate-300 font-mono text-sm">02.</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Billing</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Subscription plans, secure payment methods, and invoice history.</p>
+<div class="mt-8 flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- ATS Tips -->
+<div class="group relative flex flex-col p-8 rounded-xl border border-slate-200 bg-white hover:border-primary/50 transition-all premium-gradient shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<div class="p-3 bg-slate-50 rounded group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-primary transition-colors">description</span>
+</div>
+<span class="text-slate-300 font-mono text-sm">03.</span>
+</div>
+<h3 class="text-xl font-bold mb-2">ATS Tips</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Optimizing your resume for modern applicant tracking systems.</p>
+<div class="mt-8 flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Editor Help -->
+<div class="group relative flex flex-col p-8 rounded-xl border border-slate-200 bg-white hover:border-primary/50 transition-all premium-gradient shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<div class="p-3 bg-slate-50 rounded group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-primary transition-colors">edit_note</span>
+</div>
+<span class="text-slate-300 font-mono text-sm">04.</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Editor Help</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Mastering our drag-and-drop resume builder and formatting tools.</p>
+<div class="mt-8 flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section Footer -->
+<div class="mt-32 pt-16 border-t border-slate-200 text-center">
+<p class="text-slate-500 mb-6">Still need assistance?</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-white border border-slate-200 px-10 py-4 rounded-none text-sm font-bold hover:bg-slate-50 transition-colors uppercase tracking-widest text-text-custom">
+                    Contact Support
+                </button>
+<button class="bg-primary text-white px-10 py-4 rounded-none text-sm font-bold hover:brightness-110 transition-colors uppercase tracking-widest">
+                    Live Chat
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 px-6 lg:px-20 py-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 bg-slate-100 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-slate-600">layers</span>
+</div>
+<span class="font-bold text-slate-500">ResumeHub.in</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookie Settings</a>
+</div>
+<p class="text-sm text-slate-400">© 2024 ResumeHub. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

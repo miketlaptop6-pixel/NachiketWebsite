@@ -1,0 +1,39 @@
+$ErrorActionPreference = "Stop"
+
+New-Item -ItemType Directory -Force -Path "screens\1_Privacy_Policy" | Out-Null
+curl.exe -o "screens\1_Privacy_Policy\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uhekNecZ1R7rfrwYqspg2lUCM6Y__eQxVsVG0DoXYH38IG5EXAPjCbUBoW-MXEh7fpH5pFMQZ2Z8igq-h1v2TkJt29bWXT4dfgAl2-i7SdrFbQGtsDrfH_rtTStSsOF9O5waIgjE7DDdkAyOXNbzk1aOsXKbPLNbZRd3iR3n_qDXGk4kzPDfko7gl1RjZBSWmjL3UVTG_ZWOB3fvv6dlpzlrIn85CO7fXW-2Y8QiuGhogUsHEtzEQ3LLRg"
+curl.exe -o "screens\1_Privacy_Policy\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzJkMzAxYTU1OWFhMTRjOTE5ZmRjZDk4MDU3OTE0N2RkEgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\2_Terms_of_Service" | Out-Null
+curl.exe -o "screens\2_Terms_of_Service\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0ujytBOSkmbPXXyIw4MUol-dLpD5gNMHKF1pdAol7mQUrSfkDo3yIcw2sL4p7YsvUG9RoavVVqzqg_ggQfaHxUfc6PnqDh3lTNPcC6omawOIJTqNjIyilvdsmHCjB6UwiJxuPzF-jgddFNkkRVg791PThhvaitUZ0eI1tXtGJYaw_a-DHm3TegfbOwpkxj684DR2l5XeaLILizK39ke36-d3nw26HCmubgpBj0Y9eQskQnxkinYQOFcAQns"
+curl.exe -o "screens\2_Terms_of_Service\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzVkZTllNTUwYTgyYjRhY2U4MmFkOWIyODY5ZDAwMTZkEgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\3_Support_Center" | Out-Null
+curl.exe -o "screens\3_Support_Center\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0ujEuMCFga0NrvOvuyr0PjHK4gU_Fl8_bmSGc82yAaKsfy2FOJO3tSXvcGGnT6x5VJkti1hVTMxy7mhQmjh8TvgGqz7DgyOkAsEu8kgEojMuiRDgdnVjPRQPibLtN3lzIXv7V-gQh4gSCx8TSgflIyCNuAxsOX6oNeW_AJsh-Xf_AyNCaoayiev3JKFGbkg4e_cMypMTTXEvXFlVo6VqlJ6U8dM8dUUxk6Yd9IPjIznMbU2dWHb1AN5Pw-M"
+curl.exe -o "screens\3_Support_Center\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzk3MDI4ZTkwN2E1MjRjNWJhOGQzOWYyNTkwZjBlNjdiEgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\4_Feedback" | Out-Null
+curl.exe -o "screens\4_Feedback\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0ujIAEimqemmI2qhInUN6vAwShr9TwgmWaLXd7Jftjv4WUFwXHopg90dNP5wDusyq0N84jArrssVUBgopuwZ66nJHjLCPm4kRYekNpxoVTpsj3OOdN1pshGqCt297A0shjIP1B0NQrLEfHsvKSceCvhrQMUPmAK8IOODRjrgQNCom2wsKUu4thgqarU0SApYgU6EDDXBqLLXXjldxDgSsRcdghiwHol30RJfuE2FHWICxTngzPZoYScYml0"
+curl.exe -o "screens\4_Feedback\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFhNjg0ZDEwOWE2ODQ3NjNhOTk3NTM4MWRjMzUzNDI0EgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\5_Freemium_Landing_Page" | Out-Null
+curl.exe -o "screens\5_Freemium_Landing_Page\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uiwQnMK2B6RT4ufYzLpTHkWhHhlb5iPHGPBS6HdVBXRHO_UuxOG3DnnmJ20a63-OWV_ljOMRQltaJgJEaRBHTUWCXCY9-7XtnImGVjK6-RsOHg-YQhQq7CI_TMPRDLRWpxkYm5m04DXfOYTW_Kj6jETfSFU8d9F6C7Xy49uBGlz7omNA2w44NFIY8MNQ7VMCphpSgiYS_sR8vnhhKv8omVuUXBnlFIPaGUapsIQE7DDZ0e17XCL65ivw6o"
+curl.exe -o "screens\5_Freemium_Landing_Page\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzNhNWJlNmMzYWM5MzRlOTE4OWRlOTQ1NTYwODA2ZThhEgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\6_Expanded_Professional_Template_Library" | Out-Null
+curl.exe -o "screens\6_Expanded_Professional_Template_Library\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uiX2cb44lztW5uf6o7jjATTEk3MeflJvcw1YG9KomHMY38oTdz4EEHtBtBIm3mhh9xqHV-47_0u7x2D-7yAVUa0j7S5_zu0OBg2493NcM3impXtuKr2dHzJ18gsPPaniJio92aQ8VRO9u_ynxDGiUPV4wx0Mkbp4xf6Ej_u8JHsi2NzYZcXkSqVIq-96Wy30eUB8LbQ26rFuXvqlBnodGmraCU2rO46b4Raz8emkLauPYobRW-Texiqv2Y"
+curl.exe -o "screens\6_Expanded_Professional_Template_Library\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Y3ZjM5ZTc1M2RjMzQ1MDc4MzY1YzkzOTc0M2VkMjM0EgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\7_Contact_Us" | Out-Null
+curl.exe -o "screens\7_Contact_Us\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uhp0We0-O8b2Hkgj_NnXYsH727TgTriGashDebo2Qdk4_FLNHyCdW1kmsIO7MY8LGbJhtZklgxNyJFlTxLhkHD0dbscUkL-TpkKrOuve5U0mzoSeUTx1EMm9zlc125fpMrN3YERWcEDVeK3uLBRksFTUBF9kWuOiyWN-nMo1_23NWfuLm49zk9o4ieUvkcicXKMT0HKvHHgUTutnn9nZkyA8UL06fhLUOGuSLXlZK4ZhV0rHPHosdaBFjg"
+curl.exe -o "screens\7_Contact_Us\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzYyZTg3MmU3NjAwODRkYjg4NTNiYTMxODE5YmIzYzYxEgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\8_Our_Philosophy" | Out-Null
+curl.exe -o "screens\8_Our_Philosophy\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uhKvy_MfLuC_qbUKcKpM5LM4jxcgWw0ZTaQoLEGXqa6vdO6jb8H7I6kI-Jv9VEpdMVTsKy5B384gj22FPNa7palA_ejRfQMJIN8UmpvyW9ifl2onTWM-634JXsmbyz5pNHiwXrSiNIF0863Kvq1A-7QYtIWAi4nYRakSh1eVZ5KUWEa2kxKUcPRP9iU3OXK8YBI4ii1q3IEu728ukYlZ9VAMOoXWbtBLUKUBycb4s637MlsH1JDdchqGfo"
+curl.exe -o "screens\8_Our_Philosophy\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2I3MTgxZTIyNGE2MTRlZjZhZWE2MmM4YzU4ZTUzOTU4EgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+New-Item -ItemType Directory -Force -Path "screens\9_Career_Resources" | Out-Null
+curl.exe -o "screens\9_Career_Resources\screenshot.png" -L "https://lh3.googleusercontent.com/aida/ADBb0uhBUreWsda-w-AJGGb8aRrCCh6MW9lnCMgFuFJ6g2X0oOYV_cyuYWtsXderls2wqZ_h733IBJsAh7kKw91SO6fK4ZnOih3xR8bRcYhSLqy3QpymCi8dGpnqdAitwT3D5CuYzF5VjTOtSnrydDOEy4fMjR2R8balb6NLEWQcVu_RHFAC5wt8-hOgHfUCaRBctNt5Tsyots-ytXc7vPDI9FP5nufrWAcfm-cBs-Ip0F-wwuwni0uQAp8WOQ4"
+curl.exe -o "screens\9_Career_Resources\index.html" -L "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzBjYmE3MWY4ZDViYTQ2YzNhZTA3MzNjODAwYTk5YTY2EgsSBxCNrunxtAIYAZIBIwoKcHJvamVjdF9pZBIVQhM1MTExMjQ0Mzk4Njk3OTQ0MjU5&filename=&opi=89354086"
+
+Write-Output "Download complete!"

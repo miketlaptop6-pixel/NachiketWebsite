@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal DNA Fingerprinting | Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="12" fill="#1A1F71"/>
+                    <path d="M7 12H17M12 7V17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Deal DNA</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">New Deal</a>
+                <a href="#" class="nav-link">Deal History</a>
+                <a href="#" class="nav-link">Insights</a>
+                <a href="#" class="nav-link">Settings</a>
+            </nav>
+            <button class="btn-logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Deal Initiation Form -->
+        <section class="card" id="deal-form-section">
+            <h1 class="section-title">New Deal Initiation</h1>
+            <p class="section-subtitle">Enter deal details to generate template and view predictive insights</p>
+
+            <form id="deal-form" class="form-grid">
+                <!-- Opportunity ID -->
+                <div class="form-group">
+                    <label for="opp-id" class="form-label">Opportunity ID *</label>
+                    <input type="text" id="opp-id" class="form-input" placeholder="e.g., OPP-2026-0042" required aria-required="true">
+                </div>
+
+                <!-- Region -->
+                <div class="form-group">
+                    <label for="region" class="form-label">Region *</label>
+                    <select id="region" class="form-input" required aria-required="true">
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="na">North America</option>
+                        <option value="eu">Europe</option>
+                        <option value="apac">Asia Pacific</option>
+                        <option value="latam">Latin America</option>
+                        <option value="mea">Middle East & Africa</option>
+                    </select>
+                </div>
+
+                <!-- Client Name -->
+                <div class="form-group">
+                    <label for="client-name" class="form-label">Client Name *</label>
+                    <input type="text" id="client-name" class="form-input" placeholder="e.g., Acme Retail Bank" required aria-required="true">
+                </div>
+
+                <!-- Client Type -->
+                <div class="form-group">
+                    <label for="client-type" class="form-label">Client Type *</label>
+                    <select id="client-type" class="form-input" required aria-required="true">
+                        <option value="" disabled selected>Select Client Type</option>
+                        <option value="retail-bank">Retail Bank</option>
+                        <option value="neo-bank">Neo Bank</option>
+                        <option value="fintech">Fintech</option>
+                        <option value="co-brand">Co-brand Issuer</option>
+                        <option value="nbfc">NBFC</option>
+                    </select>
+                </div>
+
+                <!-- Deal Type -->
+                <div class="form-group">
+                    <label class="form-label">Deal Type *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="deal-type" value="standard" required aria-required="true">
+                            <span class="radio-custom"></span>
+                            Standard
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="deal-type" value="non-standard" required aria-required="true">
+                            <span class="radio-custom"></span>
+                            Non-Standard
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Deal Tenure -->
+                <div class="form-group">
+                    <label for="deal-tenure" class="form-label">Deal Tenure *</label>
+                    <select id="deal-tenure" class="form-input" required aria-required="true">
+                        <option value="" disabled selected>Select Tenure</option>
+                        <option value="1">1 Year</option>
+                        <option value="3">3 Years</option>
+                        <option value="5">5 Years</option>
+                    </select>
+                </div>
+
+                <!-- Error Message -->
+                <div id="form-error" class="error-message hidden">Please fill all required fields</div>
+
+                <!-- Generate Button -->
+                <button type="submit" class="btn-primary" id="generate-btn">
+                    Generate Deal Template
+                </button>
+            </form>
+
+            <!-- Download Button (Hidden initially) -->
+            <div id="download-section" class="hidden margin-top-24">
+                <button class="btn-primary" id="download-btn">
+                    Download Deal Template
+                </button>
+                <p class="helper-text margin-top-8">Template generated for <span id="download-client-name"></span> · <span id="download-opp-id"></span></p>
+            </div>
+        </section>
+
+        <!-- Loading Overlay (Hidden initially) -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <p class="loading-text">Generating deal template...</p>
+        </div>
+
+        <!-- Success Toast (Hidden initially) -->
+        <div id="success-toast" class="toast hidden">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16.666 5L7.5 14.1667L3.333 10" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Deal template generated successfully!</span>
+        </div>
+
+        <!-- Insights Section (Hidden initially) -->
+        <section id="insights-section" class="hidden margin-top-32">
+            <h2 class="section-title">Deal DNA Insights</h2>
+            <p class="section-subtitle">Predictive insights for <span id="insights-client-name"></span> based on historical deal patterns</p>
+
+            <!-- DNA Match Banner -->
+            <div class="card dna-match-banner">
+                <div class="dna-match-content">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#1A1F71"/>
+                    </svg>
+                    <div>
+                        <h3 class="dna-match-title">Matched to Deal Archetype: <span id="archetype-name">Neo Bank Growth – APAC</span></h3>
+                        <p class="dna-match-subtitle">85% similarity to approved deals with 40% faster cycle time</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid margin-top-24">
+                <div class="card stat-card">
+                    <p class="stat-label">First Pass Approval Rate</p>
+                    <p class="stat-value">82%</p>
+                    <p class="stat-change positive">+12% vs avg</p>
+                </div>
+                <div class="card stat-card">
+                    <p class="stat-label">Predicted Approval ETA</p>
+                    <p class="stat-value">4.2 Days</p>
+                    <p class="stat-change positive">-1.8 days vs avg</p>
+                </div>
+                <div class="card stat-card">
+                    <p class="stat-label">Avg Historical Iterations</p>
+                    <p class="stat-value">1.2</p>
+                    <p class="stat-change positive">-0.8 vs avg</p>
+                </div>
+            </div>
+
+            <!-- Insight Sections -->
+            <div class="insights-sections margin-top-32">
+                <!-- 1. Client / Issuer Attributes -->
+                <div class="card insight-section">
+                    <details open>
+                        <summary class="insight-summary">
+                            <h3 class="insight-title">1. Client / Issuer Attributes (WHO)</h3>
+                            <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="insight-content">
+                            <div class="insight-grid">
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Issuer Type</p>
+                                    <p class="insight-item-value">Neo Bank</p>
+                                    <p class="insight-item-bench">Matches archetype</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Issuer Size (TPV)</p>
+                                    <p class="insight-item-value">$1.2B</p>
+                                    <p class="insight-item-bench">12% above archetype avg</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Portfolio Mix</p>
+                                    <p class="insight-item-value">70% Credit / 30% Debit</p>
+                                    <p class="insight-item-bench">Optimal for growth</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Customer Segment</p>
+                                    <p class="insight-item-value">Affluent / HNI</p>
+                                    <p class="insight-item-bench">High spend concentration</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Digital Maturity</p>
+                                    <p class="insight-item-value">API-First, Tokenization Ready</p>
+                                    <p class="insight-item-bench">Top 10% of archetype</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 2. Portfolio Economics -->
+                <div class="card insight-section margin-top-16">
+                    <details>
+                        <summary class="insight-summary">
+                            <h3 class="insight-title">2. Portfolio Economics (WHAT)</h3>
+                            <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="insight-content">
+                            <div class="insight-grid">
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Annual TPV</p>
+                                    <p class="insight-item-value">$1.2B</p>
+                                    <p class="insight-item-bench">+15% YoY growth</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Cross-Border Spend</p>
+                                    <p class="insight-item-value">22%</p>
+                                    <p class="insight-item-bench">High predictor of yield</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Active Rate</p>
+                                    <p class="insight-item-value">78%</p>
+                                    <p class="insight-item-bench">+5% vs archetype avg</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Revolve Rate</p>
+                                    <p class="insight-item-value">34%</p>
+                                    <p class="insight-item-bench">Optimal profitability</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Rewards Burn</p>
+                                    <p class="insight-item-value">1.2%</p>
+                                    <p class="insight-item-bench">Within target range</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 3. Deal Structure Parameters -->
+                <div class="card insight-section margin-top-16">
+                    <details>
+                        <summary class="insight-summary">
+                            <h3 class="insight-title">3. Deal Structure Parameters (HOW)</h3>
+                            <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="insight-content">
+                            <div class="insight-grid">
+                                <div class="insight-item recommended">
+                                    <p class="insight-item-label">Deal Tenure</p>
+                                    <p class="insight-item-value">3 Years</p>
+                                    <p class="insight-item-bench">Recommended (92% approval rate)</p>
+                                </div>
+                                <div class="insight-item recommended">
+                                    <p class="insight-item-label">Incentive Type</p>
+                                    <p class="insight-item-value">Milestone-Based</p>
+                                    <p class="insight-item-bench">Recommended (1.1 avg iterations)</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Marketing Funds</p>
+                                    <p class="insight-item-value">$250K MDF</p>
+                                    <p class="insight-item-bench">Matches archetype avg</p>
+                                </div>
+                                <div class="insight-item recommended">
+                                    <p class="insight-item-label">Revenue Share</p>
+                                    <p class="insight-item-value">18bps Cross-Border</p>
+                                    <p class="insight-item-bench">Optimal for client size</p>
+                                </div>
+                                <div class="insight-item">
+                                    <p class="insight-item-label">Exclusivity</p>
+                                    <p class="insight-item-value">Partial (Digital Channels)</p>
+                                    <p class="insight-item-bench">Standard for neo banks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

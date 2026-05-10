@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#063ff9",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1423",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .editorial-line { height: 1px; width: 100%; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1 rounded">
+<span class="material-symbols-outlined text-white text-xl">grid_view</span>
+</div>
+<h1 class="text-xl font-black tracking-tighter uppercase italic">ResumeHub.in</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Builder</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Templates</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 text-sm font-bold rounded hover:bg-primary/90 transition-all">
+                    Get Started
+                </button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Title Section -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-12">
+<div class="editorial-line bg-slate-900 dark:bg-slate-100 mb-8"></div>
+<div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tighter uppercase max-w-4xl">
+                        Our<br/>Philosophy
+                    </h1>
+<div class="max-w-sm">
+<p class="text-xl font-medium leading-relaxed italic border-l-4 border-primary pl-6">
+                            Shaping the future of career narratives through minimalist design and high-impact content.
+                        </p>
+</div>
+</div>
+<div class="editorial-line bg-slate-900 dark:bg-slate-100 mt-16"></div>
+</section>
+<!-- Statement Section -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">The Vision</span>
+</div>
+<div class="lg:col-span-8">
+<h2 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+                            “We believe that a resume is a tool for communication, not a canvas for decoration.”
+                        </h2>
+</div>
+</div>
+</section>
+<!-- Image Section -->
+<section class="px-6 lg:px-12">
+<div class="max-w-7xl mx-auto h-[600px] w-full bg-slate-200 dark:bg-slate-800 rounded-lg overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" data-alt="Modern minimalist office workspace with stark lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBq4a-yKxXdh1UeFoLLhqhZC6ApID-Dpmng1aHzQCCj4TnjyT-aDrU3D3eHn3_gDJLM5bFbPv70HqdvbUqRnWs6dzYDclIvTGDlyo6-5yv_wet3Tl2uHL7kb5F9aANEEnF3ZR01dijvuY97JfpAY4HxJnNiz-qOuX4z6jXB2C6qKfybhVRH9nM2uSL19YZ66eMFqxUCeoYD206mSxR68vDwNpGNoKrDx5PCxGPHeaNbHab3Wre4xenSQZyDQB7OLbsFnTsHW3pHTu4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-12 left-12 text-white">
+<p class="text-4xl font-black uppercase tracking-tighter">Substance Over Style</p>
+</div>
+</div>
+</section>
+<!-- Philosophy Pillars -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-32">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16">
+<div class="flex flex-col gap-6">
+<div class="editorial-line bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-4xl font-black italic">01.</span>
+<h3 class="text-3xl font-bold">Absolute Clarity</h3>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Your expertise shouldn't be buried under fancy graphics. We prioritize layout logic that helps recruiters find what they need in less than 6 seconds.
+                        </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="editorial-line bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-4xl font-black italic">02.</span>
+<h3 class="text-3xl font-bold">Content is King</h3>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            A beautiful template cannot save poor writing. We focus on framing your achievements through metrics and powerful verbs that command attention.
+                        </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="editorial-line bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-4xl font-black italic">03.</span>
+<h3 class="text-3xl font-bold">ATS Optimized</h3>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            The machines come first, then the humans. Our architecture ensures your data is perfectly parsed by every Applicant Tracking System on the market.
+                        </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="editorial-line bg-slate-300 dark:bg-slate-700"></div>
+<span class="text-4xl font-black italic">04.</span>
+<h3 class="text-3xl font-bold">Evergreen Design</h3>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Trends fade, but professional elegance is timeless. Our designs are built to look as relevant in ten years as they do today.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Editorial Callout -->
+<section class="bg-slate-900 text-white dark:bg-white dark:text-slate-900 py-32">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+<p class="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-8">Ready to transform your career?</p>
+<h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-12 italic">Let's build something meaningful together.</h2>
+<div class="flex justify-center gap-6">
+<button class="bg-primary text-white px-10 py-5 text-lg font-black uppercase tracking-widest rounded-lg hover:scale-105 transition-transform">
+                            Create Resume
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark py-12 px-6 lg:px-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+<span class="text-lg font-black uppercase tracking-tighter">ResumeHub.in</span>
+</div>
+<div class="flex gap-8 text-sm font-medium">
+<a class="hover:text-primary" href="#">Twitter</a>
+<a class="hover:text-primary" href="#">LinkedIn</a>
+<a class="hover:text-primary" href="#">Instagram</a>
+</div>
+<p class="text-slate-500 text-xs">© 2024 ResumeHub.in. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

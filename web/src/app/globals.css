@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0036CC;
+  --color-background: #F9F9F9;
+  --color-text: #111111;
+  --color-muted: #737373;
+  --color-border: #111111;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-text);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+  /* Android gesture nav safe area */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ============================
+   MOBILE / ANDROID RESETS
+   ============================ */
+
+/* Remove blue tap flash on Android Chrome */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent double-tap zoom on buttons/links */
+html {
+  touch-action: manipulation;
+}
+
+/* Ensure inputs don't zoom on focus (Android) — font-size >= 16px in forms */
+input,
+textarea,
+select {
+  font-size: max(16px, 1em);
+}
+
+/* Brutalist Grid System */
+.grid-border {
+  border: 1px solid var(--color-border);
+}
+
+.border-b-1 {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.border-r-1 {
+  border-right: 1px solid var(--color-border);
+}
+
+.border-l-1 {
+  border-left: 1px solid var(--color-border);
+}
+
+.border-t-1 {
+  border-top: 1px solid var(--color-border);
+}
+
+.border-1 {
+  border: 1px solid var(--color-border);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animation for Ticker */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom cursor for editor */
+.cursor-blink {
+  display: inline-block;
+  width: 12px;
+  height: 24px;
+  background-color: var(--color-primary);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Typography Overrides */
+.heading-huge {
+  /* min lowered to 2.2rem so it fits 360px Android screens without overflow */
+  font-size: clamp(2.2rem, 10vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.btn-brutalist {
+  transition: 0ms;
+  /* Instant snap as per instructions */
+}
+
+.cta-button {
+  transition: transform 100ms ease, box-shadow 100ms ease;
+}
+
+.cta-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px var(--color-text);
+}
+
+.cta-button:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px var(--color-text);
+}
+
+/* ============================
+   MICRO-ANIMATIONS & POLISH
+   ============================ */
+
+/* Fade-in-up on scroll (for sections) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Staggered entrance for lists/grids */
+.animate-stagger>* {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.animate-stagger>*:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.animate-stagger>*:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.animate-stagger>*:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.animate-stagger>*:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+.animate-stagger>*:nth-child(5) {
+  animation-delay: 320ms;
+}
+
+.animate-stagger>*:nth-child(6) {
+  animation-delay: 400ms;
+}
+
+/* Subtle hover lift for cards */
+.hover-lift {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 200ms ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Subtle scale on focus for inputs */
+input:focus,
+textarea:focus {
+  transition: border-color 150ms ease;
+}
+
+/* Page enter animation */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main>* {
+  animation: pageEnter 0.4s ease-out both;
+}
+
+/* Pulse dot for live indicators */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Border glow on focus */
+.border-glow:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 54, 204, 0.12);
+  border-color: var(--color-primary) !important;
+}
