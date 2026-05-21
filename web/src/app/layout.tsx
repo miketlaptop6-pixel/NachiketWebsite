@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "ResumeHub.in | ATS-Optimized Resumes",
+  title: "NachiketBhogawar.in | ATS-Optimized Resumes",
   description: "ATS-Optimized Resumes For The Ruthlessly Efficient. Start building your semantic, content-first resume completely free.",
 };
 
@@ -32,7 +33,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${fraunces.variable} antialiased flex flex-col min-h-screen`}
       >
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

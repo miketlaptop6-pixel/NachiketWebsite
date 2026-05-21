@@ -25,15 +25,15 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
         {/* Brand — full-width on mobile */}
         <div className="col-span-2 md:col-span-1 p-6 md:p-10 border-b-1 md:border-b-0 md:border-r-1">
-          <h4 className="text-xl font-bold uppercase tracking-tighter mb-4">ResumeHub.in</h4>
+          <h4 className="text-xl font-bold uppercase tracking-tighter mb-4">NachiketBhogawar.in</h4>
           <p className="text-xs text-muted max-w-xs leading-relaxed mb-6">
             A utilitarian approach to professional career documentation. Designed for substance over style.
           </p>
           <div className="flex gap-4">
-            <Link className="text-xs font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors min-h-[44px] flex items-center" href="https://twitter.com/resumehub" target="_blank">
+            <Link className="text-xs font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors min-h-[44px] flex items-center" href="https://twitter.com/nachiketbhogawar" target="_blank">
               Twitter
             </Link>
-            <Link className="text-xs font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors min-h-[44px] flex items-center" href="https://linkedin.com/company/resumehub" target="_blank">
+            <Link className="text-xs font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors min-h-[44px] flex items-center" href="https://linkedin.com/company/nachiketbhogawar" target="_blank">
               LinkedIn
             </Link>
           </div>
@@ -62,7 +62,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t-1 px-6 md:px-10 py-5 flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="text-[10px] text-muted uppercase tracking-widest text-center md:text-left">
-          © {new Date().getFullYear()} ResumeHub.in — All rights reserved.
+          © {new Date().getFullYear()} NachiketBhogawar.in — All rights reserved.
         </p>
         <p className="text-[10px] text-muted uppercase tracking-widest">
           Made with ■ in India

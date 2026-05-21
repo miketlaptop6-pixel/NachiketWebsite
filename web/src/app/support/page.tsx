@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Support Center | ResumeHub.in",
-  description: "Get help with ResumeHub.in — FAQs, guides, and direct support.",
+  title: "Support Center | NachiketBhogawar.in",
+  description: "Get help with NachiketBhogawar.in — FAQs, guides, and direct support.",
 };
 
 const faqs = [
   { q: "How do I create a new resume?", a: "Click 'Start Building' on the homepage. You can either enter your details manually or upload an existing resume to get started. Our system will parse your content and structure it into an optimized format." },
-  { q: "Is ResumeHub.in really free?", a: "Yes! Our core builder with the Standard template and single PDF export is completely free. Premium templates and unlimited exports are available through our paid plans." },
+  { q: "Is NachiketBhogawar.in really free?", a: "Yes! Our core builder with the Standard template and single PDF export is completely free. Premium templates and unlimited exports are available through our paid plans." },
   { q: "What file formats can I export?", a: "Currently we support PDF export optimized for ATS systems. The PDF is generated with proper text encoding ensuring 100% parseability by all major Applicant Tracking Systems." },
   { q: "How do I cancel my premium subscription?", a: "You can cancel anytime from your account settings. Your premium features will remain active until the end of your billing period. No questions asked." },
-  { q: "Can I use ResumeHub.in on mobile?", a: "Our builder is optimized for desktop and tablet experiences for the best editing workflow. The landing pages and templates gallery are fully responsive on all devices." },
+  { q: "Can I use NachiketBhogawar.in on mobile?", a: "Our builder is optimized for desktop and tablet experiences for the best editing workflow. The landing pages and templates gallery are fully responsive on all devices." },
   { q: "Is my data secure?", a: "Yes. All data is encrypted using TLS 1.3, stored on secure Indian servers, and never shared with third parties. You can delete your data at any time from your account settings." },
 ];
 
@@ -22,7 +22,7 @@ export default function Support() {
           Support Center
         </h1>
         <p className="mt-6 text-lg text-muted max-w-xl font-serif italic">
-          Everything you need to know about using ResumeHub.in effectively.
+          Everything you need to know about using NachiketBhogawar.in effectively.
         </p>
       </section>
 

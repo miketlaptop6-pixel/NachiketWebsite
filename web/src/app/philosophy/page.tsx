@@ -1,6 +1,6 @@
 import Link from "next/link";
 export const metadata = {
-  title: "Our Philosophy | ResumeHub.in",
+  title: "Our Philosophy | NachiketBhogawar.in",
   description: "Shaping the future of career narratives through minimalist design.",
 };
 

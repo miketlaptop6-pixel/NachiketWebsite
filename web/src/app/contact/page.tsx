@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact Us | ResumeHub.in",
-  description: "Get in touch with the ResumeHub.in team.",
+  title: "Contact Us | NachiketBhogawar.in",
+  description: "Get in touch with the NachiketBhogawar.in team.",
 };
 
 export default function Contact() {
@@ -70,12 +70,12 @@ export default function Contact() {
           <div className="space-y-8 md:space-y-12">
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Email</h3>
-              <p className="text-xl font-bold">hello@resumehub.in</p>
+              <p className="text-xl font-bold">hello@nachiketbhogawar.in</p>
             </div>
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Office</h3>
               <p className="text-lg text-muted leading-relaxed">
-                ResumeHub Technologies Pvt. Ltd.<br />
+                NachiketBhogawar Technologies Pvt. Ltd.<br />
                 Koramangala, Bangalore<br />
                 Karnataka, India — 560034
               </p>
@@ -83,8 +83,8 @@ export default function Contact() {
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Social</h3>
               <div className="flex gap-6 text-sm font-bold uppercase tracking-widest">
-                <a className="hover:text-primary transition-colors" href="https://twitter.com/resumehub" target="_blank">Twitter</a>
-                <a className="hover:text-primary transition-colors" href="https://linkedin.com/company/resumehub" target="_blank">LinkedIn</a>
+                <a className="hover:text-primary transition-colors" href="https://twitter.com/nachiketbhogawar" target="_blank">Twitter</a>
+                <a className="hover:text-primary transition-colors" href="https://linkedin.com/company/nachiketbhogawar" target="_blank">LinkedIn</a>
               </div>
             </div>
           </div>

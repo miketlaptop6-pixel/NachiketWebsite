@@ -17,7 +17,7 @@ export default function Header() {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex-1 p-4 md:p-6 border-r-1 flex items-center">
-          <Link href="/" className="text-lg md:text-2xl font-bold tracking-tighter uppercase">ResumeHub.in</Link>
+          <Link href="/" className="text-lg md:text-2xl font-bold tracking-tighter uppercase">NachiketBhogawar.in</Link>
         </div>
 
         {/* Desktop Nav */}

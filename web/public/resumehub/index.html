@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="icon" type="image/svg+xml" href="/nachiketbhogawar/favicon.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>NachiketBhogawar.in | Professional Resume Builder</title>
+<link rel="stylesheet" href="/nachiketbhogawar/styles.css">
+<style>
+.loading { display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+</style>
+</head>
+<body>
+<div class="loading">Loading NachiketBhogawar.in...</div>
+<script>
+// Route to the appropriate page based on URL
+const path = window.location.pathname;
+const pageMap = {
+  '/': 'page_1.html',
+  '/ai-resume-builder/': 'page_2.html',
+  '/resources/resume-checker/': 'page_3.html',
+  '/resume-examples/': 'page_4.html',
+  '/resume-skills/': 'page_5.html',
+  '/resume-templates/': 'page_6.html',
+  '/cover-letter-builder/': 'page_7.html',
+  '/cover-letter-templates/': 'page_8.html',
+  '/cover-letter-generator/': 'page_9.html',
+  '/cover-letter-examples/': 'page_10.html',
+  '/blog/': 'page_11.html',
+  '/pricing/': 'page_12.html',
+};
+
+const targetPage = pageMap[path] || 'page_1.html';
+window.location.href = '/nachiketbhogawar/' + targetPage;
+</script>
+</body>
+</html>
